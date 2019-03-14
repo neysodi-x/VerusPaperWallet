@@ -9669,9 +9669,12 @@ h1 { margin: 0px; height: 91px; }
     <div class="menu" id="menu">
       <div class="tab i18n selected" id="singlewallet" onclick="ninja.tabSwitch(this);">Single Wallet</div>
       <div class="tab i18n" id="paperwallet" onclick="ninja.tabSwitch(this);">Paper Wallet</div>
+	  <!--
+	  Hide bulk, brain and detail wallet options
       <div class="tab i18n" id="bulkwallet" onclick="ninja.tabSwitch(this);">Bulk Wallet</div>
       <div class="tab i18n" id="brainwallet" onclick="ninja.tabSwitch(this);">Brain Wallet</div>
       <div class="tab i18n" id="detailwallet" onclick="ninja.tabSwitch(this);">Wallet Details</div>
+	  -->
     </div>
 
     <div id="wallets">
@@ -10095,7 +10098,7 @@ janin.currency = {
             // Regenerate a new wallet when not expensive
             ninja.wallets.singlewallet.generateNewAddressAndKey();
             ninja.wallets.paperwallet.build(document.getElementById('paperpassphrase').value);
-            ninja.wallets.brainwallet.view();
+            // ninja.wallets.brainwallet.view();
         }
 
         // Reset wallet tab when expensive or not applicable
