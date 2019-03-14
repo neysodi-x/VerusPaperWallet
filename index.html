@@ -11115,7 +11115,7 @@ ninja.wallets.singlewallet = {
 			var bitcoinAddress = key.getBitcoinAddress();
 			var privateKeyWif = key.getBitcoinWalletImportFormat();
 			document.getElementById("btcaddress").innerHTML = bitcoinAddress;
-			document.getElementById("btcprivwif").innerHTML = privateKeyWif;
+			document.getElementById("btcprivwif").innerHTML = privateKeyWif + "<br /><a href=\"#\" onclick=\"document.getElementById(\'suppliedPrivateKey\').value=\'" + privateKeyWif+ "\'\">Copy WIF to Paper Wallet</a>";
 			var keyValuePair = {
 				"qrcode_public": bitcoinAddress,
 				"qrcode_private": privateKeyWif
