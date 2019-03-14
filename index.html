@@ -11143,7 +11143,7 @@ ninja.wallets.paperwallet = {
 		var pageBreakAt = ninja.wallets.paperwallet.pageBreakAtArtisticDefault;
 
 		if (document.getElementById("paperkeyarea").innerHTML == "") {
-			document.getElementById("paperpassphrase").disabled = true;
+			document.getElementById("paperpassphrase").disabled = false;
 			document.getElementById("paperencrypt").checked = true;
 			ninja.wallets.paperwallet.encrypt = true;
 			ninja.wallets.paperwallet.build(document.getElementById('paperpassphrase').value);
