@@ -3,56 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="description" content="Open Source Client-Side Paper Wallet Generator for Veruscoin. Create your own paper wallet in a few easy steps : Generate, Print and Fold !">
-  <meta name="keywords" content="universal, paper, wallet, generator, cryptocurrencies, bitcoin, litecoin, dogecoin" />
+  <meta name="keywords" content="paper, wallet, generator, veruscoin" />
 
-  <!--
+<!--
+  # VerusCoin PaperWallet Generator CE (Community Edition)
+  # Copyright (C)2020 The Verus Community
+  # Version : 19.MAY.2020 - by NEYSODI.X
 
-Notice of Copyrights and Licenses:
----------------------------------------
-The WalletGenerator.net project, software and embedded resources are copyright WalletGenerator.net.
-The WalletGenerator.net name and logo are not part of the open source license.
+  This software is available under The MIT License (MIT)
 
-Portions of the all-in-one HTML document contain JavaScript codes that are the copyrights of others.
-The individual copyrights are included throughout the document along with their licenses. Included
-JavaScript libraries are separated with HTML script tags.
+  Permission is hereby granted, free of charge, to any person obtaining a copy of
+  this software and associated documentation files (the "Software"), to deal in the
+  Software without restriction, including without limitation the rights to use,
+  copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+  Software, and to permit persons to whom the Software is furnished to do so,
+  subject to the following conditions:
 
-Summary of JavaScript functions with a redistributable license:
-JavaScript function   License
--------------------   --------------
-Array.prototype.map   Public Domain
-window.Crypto         BSD License
-window.SecureRandom   BSD License
-window.EllipticCurve  BSD License
-window.BigInteger     BSD License
-window.QRCode         MIT License
-window.Bitcoin        MIT License
-jsqrcode              Apache License, 2.0
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
 
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+  FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+  COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
+  AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-The WalletGenerator.net software is available under The MIT License (MIT)
-Copyright (c) 2014 WalletGenerator.net
+  # Notice of Copyrights and Licenses:
+  # ----------------------------------
+  # Check the following files:
+  # > COPYRIGHTS
+  # > LICENSE
+  # > README
+-->
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
-associated documentation files (the "Software"), to deal in the Software without restriction,
-including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
-and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial
-portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
-NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-  GitHub Repository: https://github.com/MichaelMure/WalletGenerator.net
-  -->
-
-  <title>VerusCoin Paperwallet Generator</title>
-  <link rel="shortcut icon" href="verus-favicon.png">
+  <title>VerusCoin Paperwallet Generator - CE 2020</title>
+  <link rel="shortcut icon" href="images/logo_veruscoin.png">
 
   <script type="text/javascript">
 // Array.prototype.map function is in the public domain.
@@ -2483,12 +2469,6 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 		return r;
 	}
 
-
-
-
-
-
-
 	// (protected) copy this to r
 	BigInteger.prototype.copyTo = function (r) {
 		for (var i = this.t - 1; i >= 0; --i) r[i] = this[i];
@@ -2839,10 +2819,6 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 	// "constants"
 	BigInteger.ZERO = nbv(0);
 	BigInteger.ONE = nbv(1);
-
-
-
-
 
 
 
@@ -4658,6 +4634,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 	};
 })();
   </script>
+
   <script type="text/javascript">
 /*
 Copyright (c) 2011 Stefan Thomas
@@ -4676,6 +4653,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	'object' === typeof module ? module.exports : (window.Bitcoin = {})
 );
   </script>
+
   <script type="text/javascript">
 //https://raw.github.com/bitcoinjs/bitcoinjs-lib/c952aaeb3ee472e3776655b8ea07299ebed702c7/src/base58.js
 (function (Bitcoin) {
@@ -9303,12 +9281,15 @@ function QRCodeScanner(width, height, container, success, error) {
 }
 
   </script>
+
+
+
   <style type="text/css">
 .more { background: url("./images/plus.png") no-repeat left center; width: 17px; height: 17px; display: inline-block; float: right; }
 .less { background: url("./images/minus.png") no-repeat left center; width: 17px; height: 17px; display: inline-block; float: right; }
 a { position: relative; z-index: 20; text-decoration: none; color: #d58424; }
 .right { text-align: right; }
-.walletarea { display: none; border: 1px solid #BFBFBF; background-color: white; }
+.walletarea { display: none; border: 1px solid #BFBFBF; background-color: #fff; }
 hr { margin: 20px 0; border-top: 1px dashed #008000; }
 .keyarea { height: 110px; text-align: left; position: relative; padding: 25px 25px 10px; }
 .keyarea .public { float: left; }
@@ -9320,7 +9301,7 @@ hr { margin: 20px 0; border-top: 1px dashed #008000; }
 .keyarea .qrcode_private { display: inline-block; position: relative; top: 28px; float: right; }
 .pubkeyhex { word-wrap: break-word; }
 html { height: 100%; }
-body { font-family: Arial; background-image: url('images/diamonds.png'); height: 100%; }
+body { font-family: Arial; background-color: #eeeeee; overflow:scroll; overflow-x:hidden; }
 .faqs ol { padding: 0 0 0 25px; }
 .faqs li { padding: 3px 0; }
 .question { padding: 10px 15px; text-align: left; cursor: pointer; }
@@ -9338,7 +9319,7 @@ body { font-family: Arial; background-image: url('images/diamonds.png'); height:
 .faqListBullet { padding: 0 5px 0px 15px; }
 .faqLink { cursor: pointer; }
 
-#btcaddress, #btcprivwif, #detailaddress, #detailaddresscomp, #detailprivwif, #detailprivwifcomp { font-family: monospace; font-size: 1.25em; }
+#btcaddress, #btcprivwif, #detailaddresscomp, #detailprivwif, #detailprivwifcomp { font-family: monospace; font-size: 1.25em; }
 #seedpoolarea { display: none; }
 #seedpooldisplay {  font-family: monospace; font-size: 1em; width: 640px; padding: 15px 5px; word-wrap: break-word; min-height: 98px; }
 .seedpoint { width: 6px; height: 6px; display: block; border-radius: 3px; background-color: #80CF80; position: absolute; z-index: 10; }
@@ -9407,8 +9388,6 @@ h1 { margin: 0px; height: 91px; }
 }
 .frontPageImage { width: 100%; }
 .seedFrontPageImage { max-height: 340px; }
-
-.currencyNameColumn { min-width: 120px; }
 
 .securityChecklist {
   background-color: #FFE6C9;
@@ -9502,15 +9481,11 @@ h1 { margin: 0px; height: 91px; }
 .qrcodeinputwrapper { position: relative; margin-right: 15px; }
 .qrcodeinputwrapper img { position: absolute; display: block; top: 3px; right: 20px; width: 16px; height: 16px;background: url("./images/qrcode.png"); cursor: pointer; padding: 0; }
 
-#bulkarea .body { padding: 5px 0 0 0; }
-#bulkarea .format { font-style: italic; font-size: 90%; }
-#bulktextarea { font-size: 90%; width: 98%; margin: 4px 0 0 0; }
-#brainarea .keyarea { visibility: hidden; min-height: 110px; }
 #detailarea span.qrinput { position: relative; padding: 10px; }
 #detailarea span.qrinput #detailprivkey { width: 420px; height: 20px; }
 #detailkeyarea { padding: 10px; }
 #detailarea { margin: 0; text-align: left; }
-#detailarea .notes { text-align: left; font-size: 80%; padding: 0 0 20px 0; }
+#detailarea .notes { text-align: left; /*font-size: 80%;*/ padding: 0 0 20px 0; }
 #detailarea .pubqr .item .label { text-decoration: none; }
 #detailarea .pubqr .item { float: left; margin: 10px 0; position: relative; }
 #detailarea .pubqr .item.right { float: right; position: relative; top: 0; }
@@ -9521,10 +9496,10 @@ h1 { margin: 0px; height: 91px; }
 #detailarea .item.clear { clear: both; padding-top: 10px; }
 #detailarea .label { display: block; font-weight: bold; }
 #detailarea .output { display: block; font-family: monospace; font-size: 1.25em; }
-#detailarea #detailqrcodepublic { position: relative; float: left; margin: 0 10px 0 0; padding: 13px 11px 11px 11px; }
-#detailarea #detailqrcodepubliccomp { position: relative; float: right; margin: 0 0 0 10px; padding: 13px 11px 11px 11px; }
+#detailarea { position: relative; padding: 13px 11px 11px 11px; }
+#detailarea #detailqrcodepubliccomp { position: relative; /*float: right;*/ margin: 0 0 0 10px; padding: 13px 11px 11px 11px; }
 #detailarea #detailqrcodeprivate { position: relative; float: left; margin: 0 10px 0 0; padding: 13px 11px 11px 11px; }
-#detailarea #detailqrcodeprivatecomp { position: relative; float: right; margin: 0 0 0 10px; padding: 13px 11px 11px 11px; }
+#detailarea #detailqrcodeprivatecomp { position: relative; *float: right;*/ margin: 0 0 0 10px; padding: 13px 11px 11px 11px; }
 #detailpubkey { width: 590px; }
 #detailbip38commands { display: none; padding-top: 5px; }
 #paperqrscanner { position: absolute; display: none; width: 100%; height: 100%; top: 0; left: 0; z-index: 5000; vertical-aligh: middle; }
@@ -9541,10 +9516,8 @@ h1 { margin: 0px; height: 91px; }
 .dialog { z-index: 6000; position: relative; background: white; border: 2px solid #f7931a; width: 600px; margin: 150px auto; padding: 1em; }
 .dialog-narrow { width: 300px; }
 
-#currencyddl { margin: 20px; position: absolute; right: 0; top: 60px; width: 320px; font-size: 14px; }
-#currencyddl select { font-size: 14px; }
-
-.banner { font-size: 46px; text-shadow: 1px 1px 3px #000; color: #FF9547; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); text-align: left; position: relative; }
+.banner { background-color: #5387F6; font-size: 46px; text-shadow: 1px 1px 3px #000; color: #FF9547; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); text-align: left; position: relative; }
+.banner { background: linear-gradient(to right, #4276E5, #6498F7 50%, #EEEEEE); border-top-left-radius: 27px;}
 
 /* IE8 */
 .qrcodetable { border-width: 0px; border-style: none; border-color: #0000ff; border-collapse: collapse; }
@@ -9554,7 +9527,7 @@ h1 { margin: 0px; height: 91px; }
 @media screen
 {
   #tagline { margin: 0 0 15px 0; font-style: italic; text-align: left; }
-  .menu { text-align: left; }
+  .menu { text-align: left; background: linear-gradient(to right, #4276E5, #6498F7 50%, #EEEEEE);}
   .menu .tab { border-top-left-radius: 5px; border-top-right-radius: 5px; display: inline-block; background-color: #F5F5F5;
           border: 1px solid #BFBFBF; padding: 5px; margin: 0 2px 0 0; position: relative; top: 1px; z-index: 110; cursor: pointer; }
   .menu .tab:hover { color: #d58424; }
@@ -9569,25 +9542,19 @@ h1 { margin: 0px; height: 91px; }
   .commands span.right { float: right; }
   .expandable { padding: 10px 15px; text-align: left; cursor: pointer; }
 
-    #menu { visibility: hidden; font-size: 90%; }
-    #culturemenu { text-align: right; padding: 0 20px; font-size: 14px; margin-bottom: 35px; }
-    #culturemenu span { padding: 3px; }
-    #culturemenu .selected { text-decoration: none; color: #000000; }
+  #menuX {visibility: hidden;}
+  #menu { font-size: 90%; }
+  #culturemenu { text-align: right; padding: 0 20px; font-size: 14px; margin-bottom: 35px; }
+  #culturemenu span { padding: 3px; }
+  #culturemenu .selected { text-decoration: none; color: #000000; }
 
-  #braincommands .row .label { width: 200px; display: inline-block; }
-  #braincommands .notes { font-size: 80%; display: block; padding: 5px 10px; }
-  #brainpassphrase { width: 280px; }
-  #brainpassphraseconfirm { width: 280px; }
-  #brainwarning {  }
   #detailcommands { padding: 10px 0; }
   #detailcommands span { padding: 0 10px; }
   #detailprivkey { width: 300px; }
   #detailprivkeypassphrase { width: 250px; }
   .paper .commands { border: 1px solid #BFBFBF; }
-  #bulkstartindex { width: 35px; }
-  #bulklimit { width: 45px; }
 
-  .footer { font-size: 90%; clear: both; width: 750px; padding: 10px 0 10px 0; margin: 50px auto auto auto; }
+  .footer { font-size: 90%; clear: both; width: 750px; padding: 10px 0 10px 0; margin: 5px auto 100px auto; }
   .footer div span.item { margin: 10px; }
   .footer .authorbtc { float: left; width: 470px; }
   .footer .authorbtc span.item { text-align: left; display: block; padding: 0 20px; }
@@ -9616,17 +9583,17 @@ h1 { margin: 0px; height: 91px; }
   #seedpoolarea { display: none; }
   .faq { display: none; }
   .banner { display: none; }
-  #currency { display: none; }
   #paperarea .artwallet .btcaddress, #paperarea .artwallet .btcprivwif { z-index: 999; }
   .paperWalletText { z-index: 999;}
-    .dogeTag { display: none; }
 }
 #siteTitle {
-	background: url("images/banner.png");
+  font-size: 26px;
+  color: #3165d4;
+  line-height: 26px;
 	float: right;
-	background-position: -86px 0;
   width: 436px;
-  height: 80px;
+  padding: 28px;
+  text-shadow: none;
 }
 .banner {
 	height: 100px;
@@ -9645,46 +9612,58 @@ h1 { margin: 0px; height: 91px; }
 	position: relative;
 	top: -12px;
 }
+.dkALL  {width: 100%; text-align: center;}
+.dkADR  {height: 232px; background-color: #40C0B0;}
+.dkPUBc {background-color: #30B0A0;}
+.dkPUBc, .dkPRVhex, .dkPRIVb64 {height: 132px;}
+.dkPRVwifc, .dkPRVhex, .dkPRIVb64 {background-color: #3165d4;}
+.dkPRVwifc  {height: 287px;}
+
   </style>
 </head>
-<body onclick="SecureRandom.seedTime();" onmousemove="ninja.seeder.seed(event);">
+
+<body onload="NEYSODI.funs1.fun1();">
+
   <div id="busyblock"></div>
   <div id="main">
     <div id="culturemenu">
       <span><a href="?culture=en" id="cultureen" class="selected">English</a></span> |
       <span><a href="?culture=fr" id="culturefr">Français</a></span> |
       <span><a href="?culture=ru" id="cultureru">Русский</a></span> |
-      <span><a href="?culture=es" id="culturees">Spanish</a></span> |
+      <span><a href="?culture=es" id="culturees">Español</a></span> |
     </div>
 
     <div class="banner">
       <div id="coinLogo">
-        <img id="coinLogoImg" src="logos/veruscoin.png" alt="Open Source Client-Side Verus Wallet Generator" />
+        <img id="coinLogoImg" src="images/logo_veruscoin.png" alt="Open Source Client-Side Verus Wallet Generator" />
         <span>VerusCoin</span>
       </div>
-      <div id="siteTitle" alt="VerusCoin Paper Wallet Generator"></div>
+      <div id="siteTitle" alt="VerusCoin Paper Wallet Generator">...</div>
     </div>
 
     <div id="seedpoolarea"><textarea rows="16" cols="62" id="seedpool"></textarea></div>
 
     <div class="menu" id="menu">
-      <div class="tab i18n selected" id="singlewallet" onclick="ninja.tabSwitch(this);">Single Wallet</div>
-      <div class="tab i18n" id="paperwallet" onclick="ninja.tabSwitch(this);">Paper Wallet</div>
-	  <!--
-	  Hide bulk and brain wallet
-      <div class="tab i18n" id="bulkwallet" onclick="ninja.tabSwitch(this);">Bulk Wallet</div>
-      <div class="tab i18n" id="brainwallet" onclick="ninja.tabSwitch(this);">Brain Wallet</div>
-	  -->
-      <div class="tab i18n" id="detailwallet" onclick="ninja.tabSwitch(this);">Wallet Details</div>
+      <div id="menuX">
+        <div class="tab selected" id="singlewallet" onclick="ninja.tabSwitch(this);">Single Wallet Address</div>
+        <div class="tab" id="paperwallet" onclick="ninja.tabSwitch(this);">Single Paper Wallet Address</div>
+        <div class="tab" id="detailwallet" onclick="ninja.tabSwitch(this);">Single Wallet Address Details</div>
+      </div>
     </div>
 
-    <div id="wallets">
+    <div id="startMSG" style="background-color: #ffcd5e; padding: 9px; line-height: 26px; border-bottom-right-radius: 27px;">
+      <span id="startMSG_culture">Stay Safe :)<br>Only use the generated wallet data<br>when you run the generator on a OFFLINE computer<br>Stay Safe :)</span>
+      <br>[<a href="#" class="" onClick="NEYSODI.funs1.fun2();"> <B>OK</B> </a>]
+      <br><br><span style="color: rgba(0,0,0, 0.2);">Version : [19MAY2020] - by NEYSODI.X</span>
+    </div>
+
+    <div id="wallets" style="visibility: hidden;">
       <div id="singlearea" class="walletarea">
 
         <div id="initBanner">
-          <span id="generatelabelbitcoinaddress" class="i18n">Generating new Address...</span><br />
-          <span id="generatelabelmovemouse" class="i18n">MOVE your mouse around to add some extra randomness... </span><span id="mousemovelimit"></span><br />
-          <span id="generatelabelkeypress" class="i18n">OR type some random characters into this textbox</span> <input type="text" id="generatekeyinput" onkeypress="ninja.seeder.seedKeyPress(event);" /><br />
+          <span id="generatelabelbitcoinaddress">Generating new Address...</span><br />
+          <span id="generatelabelmovemouse">MOVE your mouse around to add some extra randomness... </span><span id="mousemovelimit"></span><br />
+          <span id="generatelabelkeypress">OR type some random characters into this textbox</span> <input type="text" id="generatekeyinput" onkeypress="ninja.seeder.seedKeyPress(event);" /><br />
           <div id="seedpooldisplay"></div>
 
           <div id="rightArea">
@@ -9694,7 +9673,7 @@ h1 { margin: 0px; height: 91px; }
 
             <div id="seedSkipper">
               <a href="#" class="nicerButton 100pxwidth" onClick="ninja.seeder.seedCount = ninja.seeder.seedLimit; ninja.seeder.seed();">Skip &raquo;</a>
-              <p id="skipMessage" class="i18n">You may skip this step if you do not plan to use the random key generator.</p>
+              <p id="skipMessage">You may skip this step if you do not plan to use the random key generator.</p>
             </div>
           </div>
         </div>
@@ -9708,58 +9687,58 @@ h1 { margin: 0px; height: 91px; }
         <div id="keyarea" class="keyarea">
           <div class="public">
             <div class="pubaddress">
-              <span class="label i18n" id="singlelabelbitcoinaddress">Public Address</span>
+              <span class="label" id="singlelabelbitcoinaddress">Public Address (compressed)</span>
             </div>
             <div id="qrcode_public" class="qrcode_public"></div>
             <div class="pubaddress">
               <span class="output" id="btcaddress"></span>
             </div>
-            <div id="singleshare" class="i18n">SHARE</div>
+            <div id="singleshare">SHARE</div>
           </div>
           <div class="private">
             <div class="privwif">
-              <span class="label i18n" id="singlelabelprivatekey">Private Key (Wallet Import Format)</span>
+              <span class="label" id="singlelabelprivatekey">Private Key (Wallet Import Format)</span>
             </div>
             <div id="qrcode_private" class="qrcode_private"></div>
             <div class="privwif">
               <span class="output" id="btcprivwif"></span>
             </div>
-            <div id="singlesecret" class="i18n">SECRET</div>
+            <div id="singlesecret">SECRET</div>
           </div>
         </div>
 
         <div id="singlesafety">
           <div class="firstHalfSingleSafety">
 
-            <h3 id="securitystep0title" class="i18n">Step 0. Follow the security checklist recommendation</h3>
-            <p id="securitystep0" class="i18n">
+            <h3 id="securitystep0title">Step 0. Follow the security checklist recommendation</h3>
+            <p id="securitystep0">
               First step is to <strong>download</strong> an archive of this website from <a href="https://paperwallet.veruscoin.io/VerusPaperWallet.zip" target="_blank">https://paperwallet.veruscoin.io/VerusPaperWallet.zip</a>. Make sure your browser is doing HTTPS and is not complaining about anything related to HTTPS. After download, check the pinned posts in the <code>#community-support</code> channel of the <a href="https://veruscoin.io/discord" target="_blank">VerusCoin Discord</a> on how to verify the included signatures. <strong>VERIFY THEM!!!</strong>. If your intention to use this website in an online environment is any different than "to see what happens" and you think of using the results generated that way, under no circumstances give in to the probable urge to do so. Unzip the download and open the index.html file directly from your computer. It's just too easy to sneak some evil code in the 6000+ lines of javascript to leak your private key, and you don't want to see your fund stolen. Code version control make it much easier to cross-check what actually run. For extra security, <strong>unplug your Internet access</strong> while generating your wallet.
             </p>
-            <h3 id="securitystep1title" class="i18n">Step 1. Generate new address</h3>
-            <p id="securitystep1" class="i18n">
+            <h3 id="securitystep1title">Step 1. Generate new address</h3>
+            <p id="securitystep1">
               Click on the "Generate new address" button.
             </p>
-            <h3 id="securitystep2title" class="i18n">Step 2. Print the Paper Wallet</h3>
-            <p id="securitystep2" class="i18n">
+            <h3 id="securitystep2title">Step 2. Print the Paper Wallet</h3>
+            <p id="securitystep2">
               Click the Paper Wallet tab and print the page on high quality setting. <strong>Never save the page as a PDF file to print it later since a file is more likely to be hacked than a piece of paper.</strong>
             </p>
-            <h3 id="securitystep3title" class="i18n">Step 3. Fold the Paper Wallet</h3>
-            <p id="securitystep3" class="i18n">
+            <h3 id="securitystep3title">Step 3. Fold the Paper Wallet</h3>
+            <p id="securitystep3">
               Fold your new Paper wallet following the lines.
               <img src="images/foldinginstructions.png" alt="Fold in half lengthwise, and then in three widthwise." /><br />
               You can insert one side inside the other to lock the wallet.
             </p>
 
-            <h3 id="securitystep4title" class="i18n">Step 4. Share your public address</h3>
-            <p id="securitystep4" class="i18n">
+            <h3 id="securitystep4title">Step 4. Share your public address</h3>
+            <p id="securitystep4">
               Use your public address to receive money from other crypto-currency users. You can share your public address as much as you want.
             </p>
-            <h3 id="securitystep5title" class="i18n">Step 5. Keep your private key secret</h3>
-            <p id="securitystep5" class="i18n">
+            <h3 id="securitystep5title">Step 5. Keep your private key secret</h3>
+            <p id="securitystep5">
               The private key is literally the keys to your coins, if someone was to obtain it, they could withdraw the funds currently in the wallet, and any funds that might be deposited in that wallet.
             </p>
             <p>
-              <strong id="securitystep6" class="i18n">Please test spending a small amount before receiving any large payments.</strong><br /><br />
+              <strong id="securitystep6">Please test spending a small amount before receiving any large payments.</strong><br /><br />
             </p>
 
 
@@ -9768,14 +9747,14 @@ h1 { margin: 0px; height: 91px; }
             <img class="frontPageImage" src="images/overview.png" alt="Overview image of 4 paper wallet" />
 
             <div class="securityChecklist">
-              <b id="securitychecktitle" class="i18n">Security Checklist :</b>
+              <b id="securitychecktitle">Security Checklist :</b>
 
               <ul>
               <li id="envSecurityCheck"></li>
 
               <li id="browserSecurityCheck"></li>
 
-              <li id="securitychecklivecd" class="i18n">
+              <li id="securitychecklivecd">
                 Are you using a secure operating system guaranteed to be free of spyware and viruses, for example, TailsOS?
               </li>
               </ul>
@@ -9784,13 +9763,13 @@ h1 { margin: 0px; height: 91px; }
         </div>
       </div>
 
+<!-- paperarea : start -->
       <div id="paperarea">
         <div class="commands">
           <div id="papercommands" class="row">
-            <span><label id="paperlabelencrypt" for="paperencrypt" class="i18n">BIP38 Encrypt?</label> <input type="checkbox" id="paperencrypt" onchange="ninja.wallets.paperwallet.toggleEncrypt(this);" checked></span>
-            <span><label id="paperlabelBIPpassphrase" for="paperpassphrase" class="i18n">Passphrase:</label> <input type="text" id="paperpassphrase" /></span>
-
-            <br/>
+            <span><label id="paperlabelencrypt" for="paperencrypt">BIP38 Encrypt?</label> <input type="checkbox" id="paperencrypt" onchange="ninja.wallets.paperwallet.toggleEncrypt(this);" checked></span>
+            <span><label id="paperlabelBIPpassphrase" for="paperpassphrase">Passphrase:</label> <input type="text" id="paperpassphrase" /></span>
+            <br/><br/>
             <input type="button" id="papergenerate" value="Randomly generate" onclick="ninja.wallets.paperwallet.build(document.getElementById('paperpassphrase').value);" />
             <span>OR</span>
             <input placeholder="Enter your own WIF private key" id="suppliedPrivateKey" name="suppliedPrivateKey" spellcheck="false" />&nbsp;
@@ -9802,70 +9781,23 @@ h1 { margin: 0px; height: 91px; }
         </div>
         <div id="paperkeyarea"></div>
       </div>
+<!-- paperarea : end -->
 
-      <div id="bulkarea" class="walletarea">
-        <div class="commands">
-          <div id="bulkcommands" class="row">
-            <span><label id="bulklabelstartindex" for="bulkstartindex" class="i18n">Start index:</label> <input type="text" id="bulkstartindex" value="1" /></span>
-            <span><label id="bulklabelrowstogenerate" for="bulklimit" class="i18n">Rows to generate:</label> <input type="text" id="bulklimit" value="3" /></span>
-            <span><label id="bulklabelcompressed" for="bulkcompressed" class="i18n">Compressed addresses?</label> <input type="checkbox" id="bulkcompressed" /></span>
-            <span><input type="button" id="bulkgenerate" value="Generate" onclick="ninja.wallets.bulkwallet.buildCSV(document.getElementById('bulklimit').value * 1, document.getElementById('bulkstartindex').value * 1, document.getElementById('bulkcompressed').checked);" /> </span>
-            <span class="print"><input type="button" name="print" id="bulkprint" value="Print" onclick="window.print();" /></span>
-          </div>
-        </div>
-        <div class="body">
-          <span class="label i18n" id="bulklabelcsv">Comma Separated Values: Index,Address,Private Key (WIF)</span>
-          <textarea rows="20" cols="88" id="bulktextarea"></textarea>
-        </div>
-      </div>
-
-      <div id="brainarea" class="walletarea">
-        <div id="braincommands" class="commands">
-          <div class="row">
-            <span id="brainlabelenterpassphrase" class="label"><label id="brainlabelenterpassphraselbl" class="i18n" for="brainpassphrase">Enter Passphrase: </label></span>
-            <input tabindex="1" type="password" id="brainpassphrase" value="" onfocus="this.select();" onkeypress="if (event.keyCode == 13) ninja.wallets.brainwallet.view();" />
-            <span><label id="brainlabelshow" for="brainpassphraseshow">Show?</label> <input type="checkbox" id="brainpassphraseshow" onchange="ninja.wallets.brainwallet.showToggle(this);" /></span>
-            <span><label id="brainlabeliguana" for="brainpassphraseiguana">Iguana compatible?</label> <input type="checkbox" id="brainpassphraseiguana" /></span>
-            <span class="print"><input type="button" name="print" id="brainprint" value="Print" onclick="window.print();" /></span>
-          </div>
-          <div class="row extra">
-            <span class="label" id="brainlabelconfirm"><label id="brainlabelconfirmlbl" class="i18n" for="brainpassphraseconfirm">Confirm Passphrase: </label></span>
-            <input tabindex="2" type="password" id="brainpassphraseconfirm" value="" onfocus="this.select();" onkeypress="if (event.keyCode == 13) ninja.wallets.brainwallet.view();" />
-            <span><input tabindex="3" type="button" id="brainview" value="View" onclick="ninja.wallets.brainwallet.view();" /></span>
-            <span id="brainalgorithm" class="notes right i18n">Algorithm: SHA256 (passphrase)</span>
-          </div>
-          <div class="row extra"><span id="brainwarning"></span></div>
-          <div class="row extra errorMsg"><span id="brainerror"></span></div>
-        </div>
-        <div id="brainkeyarea" class="keyarea">
-          <div class="public">
-            <div id="brainqrcodepublic" class="qrcode_public"></div>
-            <div class="pubaddress">
-              <span class="label i18n" id="brainlabelbitcoinaddress">Public Address:</span>
-              <span class="output" id="brainbtcaddress"></span>
-            </div>
-          </div>
-          <div class="private">
-            <div id="brainqrcodeprivate" class="qrcode_private"></div>
-            <div class="privwif">
-              <span class="label i18n" id="brainlabelprivatekey">Private Key (Wallet Import Format):</span>
-              <span class="output" id="brainbtcprivwif"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-
+<!-- detail area : start -->
       <div id="detailarea" class="walletarea">
+
+        <!-- detailcommands : start -->
         <div id="detailcommands" class="commands">
 
           <div class="row extra qrzone">
             <span class="qrinput">
-            <label id="detaillabelenterprivatekey" for="detailprivkey" class="i18n">Enter Private Key</label>
+            <label id="detaillabelenterprivatekey" for="detailprivkey">Enter Private Key</label>
 
               <span class="qrcodeinputwrapper">
                 <input type="text" id="detailprivkey" value="" placeholder="Enter a private key, or click the QR icon to scan" autocomplete="off" onFocus="this.select();" onKeyPress="if (event.keyCode == 13) ninja.wallets.detailwallet.viewDetails();" />
                 <img onClick="ninja.wallets.detailwallet.qrscanner.start()" />
               </span>
+              <!-- [N.X] Accept Formats : [ WIF|Base64|Base16/HEX|BIP38 Encrypted|Base6|Mini ] -->
 
             <input type="button" id="detailview" value="View Details" onclick="ninja.wallets.detailwallet.viewDetails();" />
           </span>
@@ -9877,9 +9809,9 @@ h1 { margin: 0px; height: 91px; }
           <div id="paperqrscanner">
             <div class="background"></div>
             <div id="mainbody" class="dialog instructionsarea">
-              <h2 id="qrcaminstructiontitle" class="i18n">Scan QR code using your camera</h2>
-              <div id="paperqrnotsupported" class="hide redColor i18n">Sorry, but your web browser does not support the HTML5 camera controls. Try using a recent version of Firefox (recommended), Chrome or Opera.</div>
-              <div id="paperqrpermissiondenied" class="hide redColor i18n">
+              <h2 id="qrcaminstructiontitle">Scan QR code using your camera</h2>
+              <div id="paperqrnotsupported" class="hide redColor">Sorry, but your web browser does not support the HTML5 camera controls. Try using a recent version of Firefox (recommended), Chrome or Opera.</div>
+              <div id="paperqrpermissiondenied" class="hide redColor">
                 <p>Permission denied. Your browser should display a message requesting access to your camera. Please click the "Allow" button to enable the camera.</p>
               </div>
               <div id="paperqrerror" class="redColor"></div>
@@ -9887,161 +9819,67 @@ h1 { margin: 0px; height: 91px; }
               <button onClick="ninja.wallets.detailwallet.qrscanner.stop()">Cancel</button>
             </div>
           </div>
+
           <div id="detailbip38commands">
             <span><label id="detaillabelpassphrase" class="i18n">Enter BIP38 Passphrase</label> <input type="text" id="detailprivkeypassphrase" value="" onfocus="this.select();" onkeypress="if (event.keyCode == 13) ninja.wallets.detailwallet.viewDetails();" /></span>
             <span><input type="button" id="detaildecrypt" value="Decrypt BIP38" onclick="ninja.wallets.detailwallet.viewDetails();" /></span>
           </div>
+
         </div>
+        <!-- detailcommands : stop -->
+
+<!-- detailkeyarea : start -->
         <div id="detailkeyarea">
+
           <div class="notes">
-            <span id="detaillabelnote1" class="i18n">Your Private Key is a unique secret number that only you know. It can be encoded in a number of different formats. Below we show the Public Address and Public Key that corresponds to your Private Key as well as your Private Key in the most popular encoding formats (WIF, WIFC, HEX, B64).</span>
-            <br /><br />
+            <span id="detaillabelnote1">Your Private Key is a unique secret number that only you know.<br>Below we show the Public Address and Public Key that corresponds to your Private.</span>
           </div>
-          <div class="pubqr">
-            <div class="item">
-              <span class="label i18n" id="detaillabelbitcoinaddress">Public Address</span>
-              <div id="detailqrcodepublic" class="qrcode_public"></div>
-              <span class="output" id="detailaddress"></span>
-            </div>
-            <div class="item right">
-              <span class="label i18n" id="detaillabelbitcoinaddresscomp">Public Address Compressed</span>
-              <div id="detailqrcodepubliccomp" class="qrcode_public"></div>
-              <span class="output" id="detailaddresscomp"></span>
-            </div>
+          <br />
+          <div class="dkADR dkALL">
+            <br><span class="label" id="detaillabelbitcoinaddresscomp">Public ADDRESS - (Compressed)</span>
+            <div id="detailqrcodepubliccomp" class="qrcode_public"></div>
+            <span class="output" id="detailaddresscomp"></span>
           </div>
-          <br /><br />
-          <div class="item clear">
-            <span class="label i18n" id="detaillabelpublickey">Public Key (130 characters [0-9A-F]):</span>
-            <span class="output pubkeyhex" id="detailpubkey"></span>
-          </div>
-          <div class="item">
-            <span class="label i18n" id="detaillabelpublickeycomp">Public Key (compressed, 66 characters [0-9A-F]):</span>
+          <br />
+          <div class="dkPUBc dkALL">
+            <br><span class="label" id="detaillabelpublickeycomp">Public Key - (compressed, 66 characters [0-9A-F]):</span>
+            &nbsp;<br>
             <span class="output" id="detailpubkeycomp"></span>
           </div>
-          <hr />
-          <div class="privqr">
-            <div class="item">
-              <span class="label"><span id="detaillabelprivwif" class="i18n">Private Key WIF<br />51 characters Base58</span></span>
-              <div id="detailqrcodeprivate" class="qrcode_private"></div>
-              <span class="output" id="detailprivwif"></span>
-            </div>
-            <div class="item right">
-              <span class="label"><span id="detaillabelprivwifcomp" class="i18n">Private Key WIF Compressed<br />52 characters Base58</span></span>
-              <div id="detailqrcodeprivatecomp" class="qrcode_private"></div>
-              <span class="output" id="detailprivwifcomp"></span>
-            </div>
+          <br />
+          <div class="dkPRVwifc dkALL">
+            <br><span class="label"><span id="detaillabelprivwifcomp">Private Key - in WIF Format - (Compressed 52 characters Base58)</span><br>(WIF = Wallet Import Format)</span>
+            <div id="detailqrcodeprivatecomp" class="qrcode_private"></div>
+            <span class="output" id="detailprivwifcomp"></span>
           </div>
-          <br /><br />
-          <div class="item clear">
-            <span class="label i18n" id="detaillabelprivhex">Private Key Hexadecimal Format (64 characters [0-9A-F]):</span>
+          <br />
+          <div class="dkPRVhex dkALL">
+            <br><span class="label" id="detaillabelprivhex">Private Key - in Hexadecimal Format (64 characters [0-9A-F])</span>
+            &nbsp;<br>
             <span class="output" id="detailprivhex"></span>
           </div>
-          <div class="item">
-            <span class="label i18n" id="detaillabelprivb64">Private Key Base64 (44 characters):</span>
+          <br />
+          <div class="dkPRIVb64 dkALL">
+            <br><span class="label" id="detaillabelprivb64">Private Key - in Base64 Format (44 characters)</span>
+            &nbsp;<br>
             <span class="output" id="detailprivb64"></span>
           </div>
-          <div class="item displayNone" id="detailmini">
-            <span class="label i18n" id="detaillabelprivmini">Private Key Mini Format (22, 26 or 30 characters):</span>
-            <span class="output" id="detailprivmini"></span>
-          </div>
-          <div class="item displayNone" id="detailb6">
-            <span class="label i18n" id="detaillabelprivb6">Private Key Base6 Format (99 characters [0-5]):</span>
-            <span class="output" id="detailprivb6"></span>
-          </div>
-          <div class="item displayNone" id="detailbip38">
-            <span class="label i18n" id="detaillabelprivbip38">Private Key BIP38 Format (58 characters Base58):</span>
-            <span class="output" id="detailprivbip38"></span>
-          </div>
+
         </div>
+<!-- detailkeyarea : stop -->
+
       </div>
+<!-- detail area : stop -->
+
 
     <div id="footer" class="footer">
       <div class="copyright">
-        <span id="footerlabelcopyright2" class="i18n">See included COPYRIGHTS file.</span>
-        <span id="footerlabelnowarranty" class="i18n">No warranty.</span>
+        <span id="footerlabelcopyright2">See included COPYRIGHTS file.</span>
+        <span id="footerlabelnowarranty">No warranty.</span>
       </div>
     </div>
   </div>
 
-  <script type="text/javascript">
-(function (window) {
-	var muchIndex    = 0;
-	var wowLength    = 0;
-	var manyWords    = null;
-	var suchInterval = null;
-	var muchPlay     = false;
-	var wowElement   = document.createElement('div');
-	var suchColors   = [
-		'#FF0000',
-		'#00FF00',
-		'#0000FF',
-	];
-
-	function veryRandom(val) {
-		return Math.floor((Math.random() * val));
-	}
-
-	function placeWord(word) {
-
-		var muchWidth  = window.innerWidth - 200; //Very random offset
-		var manyHeight = window.innerHeight - 26; //Such fontsize based offset
-
-		wowElement.textContent  = word;
-		wowElement.style.left   = veryRandom(muchWidth) + 'px';
-		wowElement.style.top    = veryRandom(manyHeight) + 'px';
-		wowElement.style.color  = suchColors[veryRandom(suchColors.length)];
-	}
-
-	function muchWords() {
-		muchPlay     = true;
-		suchInterval = setInterval(function () {
-
-			if(muchIndex === wowLength - 1) {
-				muchIndex = 0;
-			} else {
-				muchIndex++;
-			}
-
-			placeWord(manyWords[muchIndex]);
-
-		}, 6000);
-
-	}
-
-	var Doge = function (words) {
-		if (typeof(words) !== 'object' || words.length === undefined) {
-			return console.error('Wow. Words is not array. Much Error.');
-		}
-
-		if (words.length < 1) {
-			return console.error('Much dumb. Very fail. No words in array. Wow');
-		}
-
-		wowLength = words.length;
-		manyWords = words;
-
-        wowElement.className = 'dogeTag';
-		wowElement.style.position   = 'fixed';
-		wowElement.style.fontSize   = '26px';
-		wowElement.style.fontFamily = '"Comic Sans MS"';
-		wowElement.style.zIndex     = 10000001;
-		document.body.appendChild(wowElement);
-		muchWords();
-	};
-
-	Doge.prototype.stop = function () {
-		if (muchPlay) {
-			muchPlay = false;
-			clearInterval(suchInterval);
-		}
-        if(wowElement != null)
-            wowElement.parentNode.removeChild(wowElement);
-	};
-
-	window.Doge = Doge;
-
-}(window));
-  </script>
   <script type="text/javascript">
 var janin = {};
 
@@ -10057,76 +9895,39 @@ janin.currency = {
         return currency;
     },
 
-    name: function() {
-        return janin.selectedCurrency.name;
-    },
+    name:             function() {return janin.selectedCurrency.name;},
+    networkVersion:   function() {return janin.selectedCurrency.networkVersion;},
+    privateKeyPrefix: function() {return janin.selectedCurrency.privateKeyPrefix;},
+    WIF_RegEx:        function() {return new RegExp("^" + janin.selectedCurrency.WIF_Start + "[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{50}$");},
+    CWIF_RegEx:       function() {return new RegExp("^" + janin.selectedCurrency.CWIF_Start + "[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{51}$");},
 
-    networkVersion: function() {
-        return janin.selectedCurrency.networkVersion;
-    },
-
-    privateKeyPrefix: function() {
-        return janin.selectedCurrency.privateKeyPrefix;
-    },
-
-    WIF_RegEx: function() {
-        return new RegExp("^" + janin.selectedCurrency.WIF_Start + "[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{50}$");
-    },
-
-    CWIF_RegEx: function() {
-        return new RegExp("^" + janin.selectedCurrency.CWIF_Start + "[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{51}$");
-    },
-
-    // Switch currency
+    // init currency
     useCurrency: function(index) {
         janin.selectedCurrency = janin.currencies[index];
 
-        var coinImgUrl = "logos/" + janin.currency.name().toLowerCase() + ".png";
+        var coinImgUrl = "images/logo_veruscoin.png";
         document.getElementById("coinLogoImg").src = coinImgUrl;
 
-        // Update title depending on currency
-        document.title = janin.currency.name() + " " + ninja.translator.get("title");
-        document.getElementById("siteTitle").alt = janin.currency.name() + " " + ninja.translator.get("title");
+        document.title = "VerusCoin " + ninja.translator.get("title");
+        document.getElementById("siteTitle").alt = "VerusCoin<br>" + ninja.translator.get("title");
+        document.getElementById("siteTitle").innerHTML = ninja.translator.get("title");
+        document.getElementById("startMSG_culture").innerHTML = ninja.translator.get("startNote");  //[N.X] Show the startnote [ use airgapped computer ]
 
-        // Update i18n link
         document.getElementById("cultureen").href = "?culture=en&currency=" + janin.currency.name().toLowerCase();
         document.getElementById("culturefr").href = "?culture=fr&currency=" + janin.currency.name().toLowerCase();
         document.getElementById("cultureru").href = "?culture=ru&currency=" + janin.currency.name().toLowerCase();
         document.getElementById("culturees").href = "?culture=es&currency=" + janin.currency.name().toLowerCase();
 
-        if(ninja.seeder.isDone())
-        {
-            // Regenerate a new wallet when not expensive
-            ninja.wallets.singlewallet.generateNewAddressAndKey();
-            ninja.wallets.paperwallet.build(document.getElementById('paperpassphrase').value);
-            // ninja.wallets.brainwallet.view();
-        }
-
-        // Reset wallet tab when expensive or not applicable
-        document.getElementById("bulktextarea").value = "";
         document.getElementById("suppliedPrivateKey").value = "";
-
-        // easter egg doge ;)
-        if(janin.currency.name() == "Dogecoin")
-        {
-            janin.doge = new Doge(['wow', 'so paper wallet', 'such random', 'very pretty', 'much design', 'awesome', 'much crypto', 'such coin', 'wow!!', 'to da moon']);
-            return;
-        }
-
-        if(janin.doge != null)
-        {
-            janin.doge.stop();
-            janin.doge = null;
-        }
     },
 };
 
-janin.currencies = [
-    //                    name, networkVersion, privateKeyPrefix, WIF_Start, CWIF_Start, donate
-    janin.currency.createCurrency ("veruscoin",         0x3c, 0xbc, "7",    "U"    , "")
-                   ];
+// coinName, networkVersion, privateKeyPrefix, WIF_Start, CWIF_Start, donate
+// veruscoin 0x3c            0xbc              "7"        "U"         ""
+janin.currencies = [janin.currency.createCurrency ("veruscoin", 0x3c, 0xbc, "7", "U", "") ];
 
   </script>
+
   <script type="text/javascript">
 var ninja = { wallets: {} };
 
@@ -10507,7 +10308,7 @@ ninja.publicKey = {
 			if (ninja.seeder.seedCount == ninja.seeder.seedLimit) {
 				ninja.seeder.seedCount++;
 				ninja.wallets.singlewallet.open();
-				document.getElementById("menu").style.visibility = "visible";
+				document.getElementById("menuX").style.visibility = "visible";
 				ninja.seeder.removePoints();
 			}
 			// seed mouse position X and Y when mouse movements are greater than 40ms apart.
@@ -10757,6 +10558,7 @@ ninja.toggleFaqQuestion = function (elementId) {
 	answerDiv.style.display = answerDiv.style.display == "block" ? "none" : "block";
 };
   </script>
+
   <script type="text/javascript">
 ninja.translator = {
 	currentCulture: "en",
@@ -10796,37 +10598,13 @@ ninja.translator = {
 		return false;
 	},
 
-	get: function (id) {
-		var translation = ninja.translator.translations[ninja.translator.currentCulture][id];
-		return translation;
-	},
-
-    staticID: [
-        "defaultTitle",
-        "title",
-        "brainalertpassphrasewarning",
-        "brainalertpassphrasetooshort",
-        "brainalertpassphrasedoesnotmatch",
-        "bulkgeneratingaddresses",
-        "bip38alertincorrectpassphrase",
-        "bip38alertpassphraserequired",
-        "detailconfirmsha256",
-        "detailalertnotvalidprivatekey",
-		"securitychecklistrandomOK",
-		"securitychecklistrandomNOK",
-		"securitychecklistofflineNOK",
-		"securitychecklistofflineOK",
-		"paperwalletback",
-    ],
+	get: function (id) {var translation = ninja.translator.translations[ninja.translator.currentCulture][id]; return translation;},
 
 	translations: {
     ﻿"en": {
+    "startNote" : "Stay Safe :)<br>Only use the generated wallet data<br>when you run the generator on a OFFLINE computer<br>Stay Safe :)",
     "defaultTitle" : "VerusCoin Paperwallet Generator",
     "title" : "Paper Wallet Generator",
-    "bulkgeneratingaddresses": "Generating addresses... ",
-    "brainalertpassphrasetooshort": "The passphrase you entered is too short.\n\n",
-    "brainalertpassphrasewarning": "Warning: Choosing a strong passphrase is important to avoid brute force attempts to guess your passphrase and steal your coins.",
-    "brainalertpassphrasedoesnotmatch": "The passphrase does not match the confirm passphrase.",
     "detailalertnotvalidprivatekey": "The text you entered is not a valid Private Key",
     "detailconfirmsha256": "The text you entered is not a valid Private Key!\n\nWould you like to use the entered text as a passphrase and create a Private Key using a SHA256 hash of the passphrase?\n\nWarning: Choosing a strong passphrase is important to avoid brute force attempts to guess your passphrase and steal your coins.",
     "bip38alertincorrectpassphrase": "Incorrect passphrase for this encrypted private key.",
@@ -10840,11 +10618,9 @@ ninja.translator = {
 
     ﻿"fr": {
 	"choosecurrency": "Choisissez une monnaie",
-	"singlewallet": "Porte-Monnaie Simple",
-	"paperwallet": "Porte-Monnaie Papier",
-	"bulkwallet": "Porte-Monnaie En Vrac",
-	"brainwallet": "Porte-Monnaie Cerveau",
-	"detailwallet": "Détails du Porte-Monnaie",
+	"singlewallet": "Adresse de portefeuille unique",
+	"paperwallet": "Adresse du portefeuille papier unique",
+	"detailwallet": "Détails de l'adresse du portefeuille unique",
 	"donate": "Soutien",
 	"generatelabelbitcoinaddress": "Génération d'une nouvelle adresse...",
 	"generatelabelmovemouse": "BOUGEZ votre souris pour ajouter de l'entropie...",
@@ -10872,21 +10648,12 @@ ninja.translator = {
 	"supportedcurrencylbl": "monnaies supportées !",
 	"paperlabelencrypt": "Chiffrer en BIP38 ?",
 	"paperlabelBIPpassphrase": "Phrase de passe:",
-	"bulklabelstartindex": "Index de départ:",
-	"bulklabelrowstogenerate": "Quantité à générer:",
-	"bulklabelcompressed": "Compresser les adresses ?",
-	"bulklabelcsv": "Valeurs Séparées Par Des Virgules (CSV): Index, Adresse, Clé privée (WIF)",
-	"brainlabelenterpassphraselbl": "Phrase de passe:",
-	"brainlabelconfirmlbl": "Confirmer la phrase de passe:",
-	"brainalgorithm": "Algorithme: SHA256(phrase de passe)",
-	"brainlabelbitcoinaddress": "Adresse publique",
-	"brainlabelprivatekey": "Clé privée (format WIF):",
 	"detaillabelenterprivatekey": "Entrez votre clé privée",
 	"qrcaminstructiontitle": "Scannez votre QR code avec votre webcam",
 	"paperqrnotsupported": "Désolé, mais votre navigateur ne supporte pas les contrôles de webcam HTML5. Essayez avec une version récente de Firefox (recommandé), de Chrome ou d'Opera",
 	"paperqrpermissiondenied": "<p>Permission refusée. Votre navigateur devrait afficher un message demandant l'autorisation d'accéder à votre webcam. Cliquez sur le bouton \"Autoriser\" pour activer la webcam.</p>",
 	"detaillabelpassphrase": "Phrase de passe BIP38",
-	"detaillabelnote1": "Votre clé privée est un nombre secret unique que seul vous connaissez. Elle peut être encodé selon différents formats. Ci-dessous s'affiche l'adresse publique et la clé publique qui correspond à votre clé privée, ainsi que votre clé privée dans les formats les plus populaires (WIF, WIFC, HEX, B64).",
+	"detaillabelnote1": "Votre clé privée est un nombre secret unique que seul vous connaissez.<br>Ci-dessous s'affiche l'adresse publique et la clé publique qui correspond à votre clé privée.",
 	"detaillabelbitcoinaddress": "Adresse publique",
 	"detaillabelbitcoinaddresscomp": "Adresse publique compressée",
 	"detaillabelpublickey": "Clé publique (130 caractères [0-9A-F]):",
@@ -10905,12 +10672,9 @@ ninja.translator = {
 	"footerlabelgithub": "Télécharger (dépôt GitHub)",
 	"footerlabelcopyright2": "Voir le fichier COPYRIGHTS inclus.",
 	"footerlabelnowarranty": "Aucune garantie.",
+  "startNote" : "Restez en sécurité :)<br>Utiliser uniquement les données de porte-monnaie générées<br>lorsque vous exécutez le générateur sur un ordinateur HORS LIGNE<br>Restez en sécurité :)",
 	"defaultTitle": "Générateur de porte-monnaie papier universel pour VerusCoin",
 	"title": "Générateur de porte-monnaie papier",
-	"brainalertpassphrasewarning": "Attention: choisir une passe de phrase forte est important pour éviter les attaques par bruteforce, pour deviner votre phrase de passe et voler vos fonds.",
-	"brainalertpassphrasetooshort": "La phrase de passe entrée est trop courte.",
-	"brainalertpassphrasedoesnotmatch": "Les deux phrases de passe ne correspondent pas.",
-	"bulkgeneratingaddresses": "Génération en cours des adresses...",
 	"bip38alertincorrectpassphrase": "Phrase de passe incorrecte pour cette clé privée chiffrée.",
 	"bip38alertpassphraserequired": "Phrase de passe requise pour une clé chiffrée BIP38.",
 	"detailconfirmsha256": "Le texte que vous avez entré n'est pas une clé privée valide !\nVoulez vous utiliser le texte comme une phrase de passe et générer une clé privée en prenant un hash SHA256 de cette phrase ?\n\nAttention: Choisir un mot de passe solide est important pour vous protéger des attaques bruteforce visant à trouver votre mot de passe et voler vos fonds.",
@@ -10923,11 +10687,9 @@ ninja.translator = {
 },
     "ru": {
 	"choosecurrency": "Выберите валюту",
-	"singlewallet": "Единичный кошелек",
-	"paperwallet": "Бумажный кошелек",
-	"bulkwallet": "Несколько кошельков",
-	"brainwallet": "\"Умственный\" кошелек",
-	"detailwallet": "Подробности о кошельке",
+	"singlewallet": "Адрес одного кошелька",
+	"paperwallet": "Единый бумажный адрес кошелька",
+	"detailwallet": "Детали адреса одного кошелька",
 	"donate": "Поддержка",
 	"generatelabelbitcoinaddress": "Создается новый адрес...",
 	"generatelabelmovemouse": "ПОДВИГАЙТЕ мышкой, чтобы сделать генерацию немного более случайной...",
@@ -10955,21 +10717,12 @@ ninja.translator = {
 	"supportedcurrencylbl": "валют доступно !",
 	"paperlabelencrypt": "Зашифровать с помощью BIP38?",
 	"paperlabelBIPpassphrase": "Кодовая фраза:",
-	"bulklabelstartindex": "Начальный индекс:",
-	"bulklabelrowstogenerate": "Количество генерируемых строк:",
-	"bulklabelcompressed": "Создавать сжатые адреса?",
-	"bulklabelcsv": "Значения, разделенные запятой: Индекс,Адрес,Закрытый ключ (WIF)",
-	"brainlabelenterpassphraselbl": "Введите кодовую фразу:",
-	"brainlabelconfirmlbl": "Подтвердите кодовую фразу:",
-	"brainalgorithm": "Алгоритм: SHA256(кодовая фраза)",
-	"brainlabelbitcoinaddress": "Открытый адрес:",
-	"brainlabelprivatekey": "Закрытый ключ (в формате импорта в кошелек - WIF):",
 	"detaillabelenterprivatekey": "Введите закрытый ключ",
 	"qrcaminstructiontitle": "Сосканируйте QR-код с помощью Вашей камеры",
 	"paperqrnotsupported": "К сожалению, Ваш браузер не поддерживает возможности HTML5 по управлению камерой. Попробуйте использовать свежую версию Firefox (рекомендуется), Chrome или Opera.",
 	"paperqrpermissiondenied": "<p>Доступ запрещен. Ваш браюзер должен отобразить сообщение с запросом доступа к Вашей камере. Пожалуйста, нажмите кнопку \"Разрешить\", чтобы предоставить доступ к Вашей камере.</p>",
 	"detaillabelpassphrase": "Введите кодовую фразу BIP38",
-	"detaillabelnote1": "Ваш закрытый ключ - это уникальный секретный номер, который знаете только Вы. Он может быть представлен в различных форматах. Ниже показаны открытый адрес и открытый ключ, соответствующие Вашему закрытому ключу, а также Ваш закрытый ключ в наиболее популярных форматах (WIF, WIFC, HEX, B64).",
+	"detaillabelnote1": "Ваш закрытый ключ - это уникальный секретный номер, который знаете только Вы.<br> Ниже показаны открытый адрес и открытый ключ, соответствующие Вашему закрытому ключу.",
 	"detaillabelbitcoinaddress": "Открытый адрес",
 	"detaillabelbitcoinaddresscomp": "Сжатый открытый адрес",
 	"detaillabelpublickey": "Открытый ключ (130 символов [0-9A-F]):",
@@ -10988,12 +10741,9 @@ ninja.translator = {
 	"footerlabelgithub": "Скачать (репозиторий на GitHub)",
 	"footerlabelcopyright2": "Смотрите включенный файл COPYRIGHTS.",
 	"footerlabelnowarranty": "Гарантии не предоставляются.",
+  "startNote" : "Оставайтесь в безопасности :)<br>Используйте только сгенерированные данные кошелька<br>когда вы запускаете генератор на оффлайновый компьютере<br>Оставайтесь в безопасности :)",
 	"defaultTitle": "генератор бумажных кошельков для VerusCoin",
 	"title": "Генератор бумажных кошельков",
-	"brainalertpassphrasewarning": "Внимание: Выбор сильной кодовой фразы очень важен для предотвращения взлома путем прямого перебора, совершаемого злоумышленниками с целью похитить Ваши деньги.",
-	"brainalertpassphrasetooshort": "Введенная Вами кодовая слишком короткая.",
-	"brainalertpassphrasedoesnotmatch": "Введенные кодовые фразы не совпадают.",
-	"bulkgeneratingaddresses": "Создаются адреса...",
 	"bip38alertincorrectpassphrase": "Неправильная кодовая фраза для данного закрытого ключа.",
 	"bip38alertpassphraserequired": "Для закрытого ключа в формате BIP38 требуется кодовая фраза",
 	"detailconfirmsha256": "Введенный Вами текст не является закрытым ключом!\nХотите использовать введенный текст в качестве кодовой фразы и создать закрытый ключ, используя SHA256 хэш этой кодовой фразы?\nВнимание: Выбор сильной кодовой фразы очень важен для предотвращения взлома путем прямого перебора, совершаемого злоумышленниками с целью похитить Ваши деньги.",
@@ -11006,11 +10756,9 @@ ninja.translator = {
 },
     "es": {
     "choosecurrency": "Elige criptodivisa",
-    "singlewallet": "Cartera única",
-    "paperwallet": "Cartera de papel",
-    "bulkwallet": "Múltiples carteras",
-    "brainwallet": "Cartera mnemotécnica",
-    "detailwallet": "Detalles de la cartera",
+    "singlewallet": "Dirección de billetera única",
+    "paperwallet": "Dirección de billetera de papel única",
+    "detailwallet": "Detalles de la dirección de billetera única",
     "donate": "Ayúdanos",
     "generatelabelbitcoinaddress": "Generando nueva dirección...",
     "generatelabelmovemouse": "MUEVE el ratón para añadir aleatoriedad extra...",
@@ -11038,21 +10786,12 @@ ninja.translator = {
     "supportedcurrencylbl": "criptodivisas soportadas!",
     "paperlabelencrypt": "Encriptación BIP38?",
     "paperlabelBIPpassphrase": "Contraseña:",
-    "bulklabelstartindex": "Iniciar índice en:",
-    "bulklabelrowstogenerate": "Líneas a generar:",
-    "bulklabelcompressed": "Direcciones comprimidas?",
-    "bulklabelcsv": "Valores separados por coma: Índice,Dirección,Clave privada (WIF)",
-    "brainlabelenterpassphraselbl": "Introduce contraseña:",
-    "brainlabelconfirmlbl": "Confirma la contraseña:",
-    "brainalgorithm": "Algoritmo: SHA256(contraseña)",
-    "brainlabelbitcoinaddress": "Dirección pública:",
-    "brainlabelprivatekey": "Clave privada (formato de importación de cartera, WIF):",
     "detaillabelenterprivatekey": "Introduce la clave privada",
     "qrcaminstructiontitle": "Escanear código QR usando la cámara",
     "paperqrnotsupported": "Lo siento, pero tu navegador web no soporta los controles HTML5 para la cámara. Intenta usar una versión reciente de FireFox (recomendado), Chrome u Opera.",
     "paperqrpermissiondenied": "<p>Permiso denegado. Tu navegador debería mostrarte un mensaje solicitándote acceso a la cámara. Por favor, haz click en el botón \"Permitir\" para habilitar la cámara.</p>",
     "detaillabelpassphrase": "Introduzca la contraseña BIP38",
-    "detaillabelnote1": "Tu clave privada es un número secreto único que sólo tú sabes. Puede codificarse en varios formatos. A continuación mostramos la dirección pública y la clave pública que corresponden a tu clave privada así como tu clave privada en los formatos de codificación más populares (WIF, WIFC, HEX, B64).",
+    "detaillabelnote1": "Tu clave privada es un número secreto único que sólo tú sabes.<br>A continuación mostramos la dirección pública y la clave pública que corresponden a tu clave privada.",
     "detaillabelbitcoinaddress": "Dirección pública",
     "detaillabelbitcoinaddresscomp": "Dirección pública comprimida",
     "detaillabelpublickey": "Clave pública (130 caracteres [0-9A-F]):",
@@ -11071,12 +10810,9 @@ ninja.translator = {
     "footerlabelgithub": "Descargar (Repositorio GitHub)",
     "footerlabelcopyright2": "Ver archivo COPYRIGHTS incluido.",
     "footerlabelnowarranty": "Sin garantía.",
+    "startNote" : "Mantenerse a salvo :)<br>Solo use los datos de billetera generados<br>cuando ejecutas el generador en una computadora sin conexión<br>Mantenerse a salvo :)",
     "defaultTitle": "Generador de carteras de papel para VerusCoin",
     "title": "Generador de carteras de papel",
-    "brainalertpassphrasewarning": "Atención: Elegir una contraseña robusta es importante para evitar los intentos de adivinarla mediante la fuerza bruta y que te roben tus monedas.",
-    "brainalertpassphrasetooshort": "La contraseña introducida es demasiado corta.",
-    "brainalertpassphrasedoesnotmatch": "La contraseña no coincide con la contraseña de confirmación.",
-    "bulkgeneratingaddresses": "Generando direcciones...",
     "bip38alertincorrectpassphrase": "Contraseña incorrecta para esta clave privada encriptada.",
     "bip38alertpassphraserequired": "Se necesita contraseña para esta clave BIP38",
     "detailconfirmsha256": "El texto introducido no es una clave privada válida!\n¿Quieres utilizar el texto introducido como contraseña y crear una clave privada usando un hash SHA256 de la contraseña?\nAtención: Elegir una contraseña robusta es importante para evitar los intentos de adivinarla mediante la fuerza bruta y que te roben tus monedas.",
@@ -11258,19 +10994,16 @@ ninja.wallets.paperwallet = {
 	},
 
 	templateArtisticHtml: function (i) {
-		var keyelement = 'btcprivwif';
-		var coinImgUrl = "logos/" + janin.selectedCurrency.name.toLowerCase() + ".png";
-		var walletBackgroundUrl = "wallets/" + janin.selectedCurrency.name.toLowerCase() + ".png";
-
+    var keyelement = 'btcprivwif', coinImgUrl = "images/logo_veruscoin.png", walletBackgroundUrl = "images/paper_veruscoin.png";
 		var walletHtml =
-							"<div class='coinIcoin'> <img id='coinImg' src='" + coinImgUrl + "' alt='currency_logo' /></div><div class='artwallet' id='artwallet" + i + "'>" +
-								"<img id='papersvg" + i + "' class='papersvg' src='" + walletBackgroundUrl + "' />" +
-								"<div id='qrcode_public" + i + "' class='qrcode_public'></div>" +
-								"<div id='qrcode_private" + i + "' class='qrcode_private'></div>" +
-								"<div class='btcaddress' id='btcaddress" + i + "'></div>" +
-								"<div class='" + keyelement + "' id='" + keyelement + i + "'></div>" +
-								"<div class='paperWalletText'><img class='backLogo' src='" + coinImgUrl + "' alt='currency_logo' />" + ninja.translator.get("paperwalletback") + "</div>" +
-							"</div>";
+        "<div class='coinIcoin'> <img id='coinImg' src='" + coinImgUrl + "' alt='currency_logo' /></div><div class='artwallet' id='artwallet" + i + "'>" +
+          "<img id='papersvg" + i + "' class='papersvg' src='" + walletBackgroundUrl + "' />" +
+          "<div id='qrcode_public" + i + "' class='qrcode_public'></div>" +
+          "<div id='qrcode_private" + i + "' class='qrcode_private'></div>" +
+          "<div class='btcaddress' id='btcaddress" + i + "'></div>" +
+          "<div class='" + keyelement + "' id='" + keyelement + i + "'></div>" +
+          "<div class='paperWalletText'><img class='backLogo' src='" + coinImgUrl + "' alt='currency_logo' />" + ninja.translator.get("paperwalletback") + "</div>" +
+        "</div>";
 		return walletHtml;
 	},
 
@@ -11279,11 +11012,11 @@ ninja.wallets.paperwallet = {
 		keyValuePair["qrcode_public" + idPostFix] = bitcoinAddress;
 		ninja.qrCode.showQrCode(keyValuePair, 3.5);
 
-        var keyValuePair = {};
-        keyValuePair["qrcode_private" + idPostFix] = privateKey;
-        ninja.qrCode.showQrCode(keyValuePair, 2.8);
+    var keyValuePair = {};
+    keyValuePair["qrcode_private" + idPostFix] = privateKey;
+    ninja.qrCode.showQrCode(keyValuePair, 2.8);
 
-        document.getElementById("btcaddress" + idPostFix).innerHTML = bitcoinAddress;
+    document.getElementById("btcaddress" + idPostFix).innerHTML = bitcoinAddress;
 		document.getElementById("btcprivwif" + idPostFix).innerHTML = privateKey;
 	},
 
@@ -11305,435 +11038,184 @@ ninja.wallets.paperwallet = {
 	}
 };
   </script>
-  <script type="text/javascript">
-ninja.wallets.bulkwallet = {
-	open: function () {
-		document.getElementById("bulkcompressed").checked = true;
-		document.getElementById("bulkarea").style.display = "block";
-		// show a default CSV list if the text area is empty
-		if (document.getElementById("bulktextarea").value == "") {
-			// return control of the thread to the browser to render the tab switch UI then build a default CSV list
-			setTimeout(function () { ninja.wallets.bulkwallet.buildCSV(3, 1, document.getElementById("bulkcompressed").checked); }, 200);
-		}
-	},
 
-	close: function () {
-		document.getElementById("bulkarea").style.display = "none";
-	},
-
-	// use this function to bulk generate addresses
-	// rowLimit: number of Bitcoin Addresses to generate
-	// startIndex: add this number to the row index for output purposes
-	// returns:
-	// index,bitcoinAddress,privateKeyWif
-	buildCSV: function (rowLimit, startIndex, compressedAddrs) {
-		var bulkWallet = ninja.wallets.bulkwallet;
-		document.getElementById("bulktextarea").value = ninja.translator.get("bulkgeneratingaddresses") + rowLimit;
-		bulkWallet.csv = [];
-		bulkWallet.csvRowLimit = rowLimit;
-		bulkWallet.csvRowsRemaining = rowLimit;
-		bulkWallet.csvStartIndex = --startIndex;
-		bulkWallet.compressedAddrs = !!compressedAddrs;
-		setTimeout(bulkWallet.batchCSV, 0);
-	},
-
-	csv: [],
-	csvRowsRemaining: null, // use to keep track of how many rows are left to process when building a large CSV array
-	csvRowLimit: 0,
-	csvStartIndex: 0,
-
-	batchCSV: function () {
-		var bulkWallet = ninja.wallets.bulkwallet;
-		if (bulkWallet.csvRowsRemaining > 0) {
-			bulkWallet.csvRowsRemaining--;
-			var key = new Bitcoin.ECKey(false);
-			key.setCompressed(bulkWallet.compressedAddrs);
-
-			bulkWallet.csv.push((bulkWallet.csvRowLimit - bulkWallet.csvRowsRemaining + bulkWallet.csvStartIndex)
-								+ ",\"" + key.getBitcoinAddress() + "\",\"" + key.toString("wif")
-			//+	"\",\"" + key.toString("wifcomp")    // uncomment these lines to add different private key formats to the CSV
-			//+ "\",\"" + key.getBitcoinHexFormat()
-			//+ "\",\"" + key.toString("base64")
-								+ "\"");
-
-			document.getElementById("bulktextarea").value = ninja.translator.get("bulkgeneratingaddresses") + bulkWallet.csvRowsRemaining;
-
-			// release thread to browser to render UI
-			setTimeout(bulkWallet.batchCSV, 0);
-		}
-		// processing is finished so put CSV in text area
-		else if (bulkWallet.csvRowsRemaining === 0) {
-			document.getElementById("bulktextarea").value = bulkWallet.csv.join("\n");
-		}
-	},
-
-	openCloseFaq: function (faqNum) {
-		// do close
-		if (document.getElementById("bulka" + faqNum).style.display == "block") {
-			document.getElementById("bulka" + faqNum).style.display = "none";
-			document.getElementById("bulke" + faqNum).setAttribute("class", "more");
-		}
-		// do open
-		else {
-			document.getElementById("bulka" + faqNum).style.display = "block";
-			document.getElementById("bulke" + faqNum).setAttribute("class", "less");
-		}
-	}
-};
-  </script>
-  <script type="text/javascript">
-ninja.wallets.brainwallet = {
-	open: function () {
-		document.getElementById("brainarea").style.display = "block";
-		document.getElementById("brainpassphrase").focus();
-		document.getElementById("brainwarning").innerHTML = ninja.translator.get("brainalertpassphrasewarning");
-	},
-
-	close: function () {
-		document.getElementById("brainarea").style.display = "none";
-	},
-
-	minPassphraseLength: 15,
-
-	view: function () {
-        document.getElementById("brainerror").innerHTML = "";
-
-		var key = document.getElementById("brainpassphrase").value.toString().replace(/^\s+|\s+$/g, ""); // trim white space
-		document.getElementById("brainpassphrase").value = key;
-		var keyConfirm = document.getElementById("brainpassphraseconfirm").value.toString().replace(/^\s+|\s+$/g, ""); // trim white space
-		document.getElementById("brainpassphraseconfirm").value = keyConfirm;
-
-		if (key == keyConfirm || document.getElementById("brainpassphraseshow").checked) {
-			// enforce a minimum passphrase length
-			if (key.length >= ninja.wallets.brainwallet.minPassphraseLength) {
-				var bytes = Crypto.SHA256(key, { asBytes: true });
-				var btcKey;
-				if (document.getElementById("brainpassphraseiguana").checked) {
-		      bytes[0] &= 248;
-		      bytes[31] &= 127;
-		      bytes[31] |= 64;
-		      btcKey = new Bitcoin.ECKey(bytes).setCompressed(true);
-				} else {
-					btcKey = new Bitcoin.ECKey(bytes);
-				}
-				var bitcoinAddress = btcKey.getBitcoinAddress();
-				var privWif = btcKey.getBitcoinWalletImportFormat();
-				document.getElementById("brainbtcaddress").innerHTML = bitcoinAddress;
-				document.getElementById("brainbtcprivwif").innerHTML = privWif;
-				ninja.qrCode.showQrCode({
-					"brainqrcodepublic": bitcoinAddress,
-					"brainqrcodeprivate": privWif
-				});
-				document.getElementById("brainkeyarea").style.visibility = "visible";
-			}
-			else {
-                document.getElementById("brainerror").innerHTML = ninja.translator.get("brainalertpassphrasetooshort");
-				ninja.wallets.brainwallet.clear();
-			}
-		}
-		else {
-			document.getElementById("brainerror").innerHTML = ninja.translator.get("brainalertpassphrasedoesnotmatch");
-			ninja.wallets.brainwallet.clear();
-		}
-	},
-
-	clear: function () {
-		document.getElementById("brainkeyarea").style.visibility = "hidden";
-	},
-
-	showToggle: function (element) {
-		if (element.checked) {
-			document.getElementById("brainpassphrase").setAttribute("type", "text");
-			document.getElementById("brainpassphraseconfirm").style.visibility = "hidden";
-			document.getElementById("brainlabelconfirm").style.visibility = "hidden";
-		}
-		else {
-			document.getElementById("brainpassphrase").setAttribute("type", "password");
-			document.getElementById("brainpassphraseconfirm").style.visibility = "visible";
-			document.getElementById("brainlabelconfirm").style.visibility = "visible";
-		}
-	}
-};
-  </script>
-  <script type="text/javascript">
+<script type="text/javascript">
 ninja.wallets.detailwallet = {
-	qrscanner: {
-		scanner: null,
+  qrscanner:
+  {
+    scanner: null,
 
-		start: function() {
-			document.getElementById('paperqrscanner').className = 'show';
-			ninja.wallets.detailwallet.qrscanner.showError(null);
-			var supported = ninja.wallets.detailwallet.qrscanner.scanner.isSupported();
-			if (!supported) {
-				document.getElementById('paperqrnotsupported').className = '';
-			} else {
-				ninja.wallets.detailwallet.qrscanner.scanner.start();
-			}
-		},
-
-		stop: function() {
-			ninja.wallets.detailwallet.qrscanner.scanner.stop();
-			document.getElementById('paperqrscanner').className = '';
-		},
-
-		showError: function(error) {
-			if (error) {
-				if (error == 'PERMISSION_DENIED' || error == 'PermissionDeniedError') {
-					document.getElementById('paperqrerror').innerHTML = '';
-					document.getElementById('paperqrpermissiondenied').className = '';
-				} else {
-					document.getElementById('paperqrerror').innerHTML = error;
-					document.getElementById('paperqrpermissiondenied').className = 'hide';
-				}
-			} else {
-				document.getElementById('paperqrerror').innerHTML = '';
-				document.getElementById('paperqrpermissiondenied').className = 'hide';
-			}
-		}
-	},
-
-	open: function () {
-		document.getElementById("detailarea").style.display = "block";
-		document.getElementById("detailprivkey").focus();
-		if (!ninja.wallets.detailwallet.qrscanner.scanner) {
-			ninja.wallets.detailwallet.qrscanner.scanner = new QRCodeScanner(320, 240, 'paperqroutput',
-				function(data) {
-					document.getElementById('detailprivkey').value = data;
-					document.getElementById('paperqrscanner').className = '';
-					ninja.wallets.detailwallet.viewDetails();
-				},
-				function(error) {
-					ninja.wallets.detailwallet.qrscanner.showError(error);
-				});
-		}
-	},
-
-	close: function () {
-		document.getElementById("detailarea").style.display = "none";
-	},
-
-	openCloseFaq: function (faqNum) {
-		// do close
-		if (document.getElementById("detaila" + faqNum).style.display == "block") {
-			document.getElementById("detaila" + faqNum).style.display = "none";
-			document.getElementById("detaile" + faqNum).setAttribute("class", "more");
-		}
-		// do open
-		else {
-			document.getElementById("detaila" + faqNum).style.display = "block";
-			document.getElementById("detaile" + faqNum).setAttribute("class", "less");
-		}
-	},
-
-	viewDetails: function () {
-		var bip38 = false;
-		var key = document.getElementById("detailprivkey").value.toString().replace(/^\s+|\s+$/g, ""); // trim white space
-		document.getElementById("detailprivkey").value = key;
-		var bip38CommandDisplay = document.getElementById("detailbip38commands").style.display;
-		ninja.wallets.detailwallet.clear();
-		if (key == "") {
-			return;
-		}
-		if (ninja.privateKey.isBIP38Format(key)) {
-			document.getElementById("detailbip38commands").style.display = bip38CommandDisplay;
-			if (bip38CommandDisplay != "block") {
-				document.getElementById("detailbip38commands").style.display = "block";
-				document.getElementById("detailprivkeypassphrase").focus();
-				return;
-			}
-			var passphrase = document.getElementById("detailprivkeypassphrase").value.toString().replace(/^\s+|\s+$/g, ""); // trim white space
-			if (passphrase == "") {
-				alert(ninja.translator.get("bip38alertpassphraserequired"));
-				return;
-			}
-			document.getElementById("busyblock").className = "busy";
-			// show Private Key BIP38 Format
-			document.getElementById("detailprivbip38").innerHTML = key;
-			document.getElementById("detailbip38").style.display = "block";
-			ninja.privateKey.BIP38EncryptedKeyToByteArrayAsync(key, passphrase, function (btcKeyOrError) {
-				document.getElementById("busyblock").className = "";
-				if (btcKeyOrError.message) {
-					alert(btcKeyOrError.message);
-					ninja.wallets.detailwallet.clear();
-				} else {
-					ninja.wallets.detailwallet.populateKeyDetails(new Bitcoin.ECKey(btcKeyOrError));
-				}
-			});
-		}
-		else {
-			if (Bitcoin.ECKey.isMiniFormat(key)) {
-				// show Private Key Mini Format
-				document.getElementById("detailprivmini").innerHTML = key;
-				document.getElementById("detailmini").style.display = "block";
-			}
-			else if (Bitcoin.ECKey.isBase6Format(key)) {
-				// show Private Key Base6 Format
-				document.getElementById("detailprivb6").innerHTML = key;
-				document.getElementById("detailb6").style.display = "block";
-			}
-			var btcKey = new Bitcoin.ECKey(key);
-			if (btcKey.priv == null) {
-				// enforce a minimum passphrase length
-				if (key.length >= ninja.wallets.brainwallet.minPassphraseLength) {
-					// Deterministic Wallet confirm box to ask if user wants to SHA256 the input to get a private key
-					var usePassphrase = confirm(ninja.translator.get("detailconfirmsha256"));
-					if (usePassphrase) {
-						var bytes = Crypto.SHA256(key, { asBytes: true });
-						var btcKey = new Bitcoin.ECKey(bytes);
-					}
-					else {
-						ninja.wallets.detailwallet.clear();
-					}
-				}
-				else {
-					alert(ninja.translator.get("detailalertnotvalidprivatekey"));
-					ninja.wallets.detailwallet.clear();
-				}
-			}
-			ninja.wallets.detailwallet.populateKeyDetails(btcKey);
-		}
-	},
-
-	populateKeyDetails: function (btcKey) {
-		if (btcKey.priv != null) {
-			btcKey.setCompressed(false);
-			document.getElementById("detailprivhex").innerHTML = btcKey.toString().toUpperCase();
-			document.getElementById("detailprivb64").innerHTML = btcKey.toString("base64");
-			var bitcoinAddress = btcKey.getBitcoinAddress();
-			var wif = btcKey.getBitcoinWalletImportFormat();
-			document.getElementById("detailpubkey").innerHTML = btcKey.getPubKeyHex();
-			document.getElementById("detailaddress").innerHTML = bitcoinAddress;
-			document.getElementById("detailprivwif").innerHTML = wif;
-			btcKey.setCompressed(true);
-			var bitcoinAddressComp = btcKey.getBitcoinAddress();
-			var wifComp = btcKey.getBitcoinWalletImportFormat();
-			document.getElementById("detailpubkeycomp").innerHTML = btcKey.getPubKeyHex();
-			document.getElementById("detailaddresscomp").innerHTML = bitcoinAddressComp;
-			document.getElementById("detailprivwifcomp").innerHTML = wifComp;
-
-			ninja.qrCode.showQrCode({
-				"detailqrcodepublic": bitcoinAddress,
-				"detailqrcodepubliccomp": bitcoinAddressComp,
-				"detailqrcodeprivate": wif,
-				"detailqrcodeprivatecomp": wifComp
-			}, 4);
-		}
-	},
-
-	clear: function () {
-		document.getElementById("detailpubkey").innerHTML = "";
-		document.getElementById("detailpubkeycomp").innerHTML = "";
-		document.getElementById("detailaddress").innerHTML = "";
-		document.getElementById("detailaddresscomp").innerHTML = "";
-		document.getElementById("detailprivwif").innerHTML = "";
-		document.getElementById("detailprivwifcomp").innerHTML = "";
-		document.getElementById("detailprivhex").innerHTML = "";
-		document.getElementById("detailprivb64").innerHTML = "";
-		document.getElementById("detailprivb6").innerHTML = "";
-		document.getElementById("detailprivmini").innerHTML = "";
-		document.getElementById("detailprivbip38").innerHTML = "";
-		document.getElementById("detailqrcodepublic").innerHTML = "";
-		document.getElementById("detailqrcodepubliccomp").innerHTML = "";
-		document.getElementById("detailqrcodeprivate").innerHTML = "";
-		document.getElementById("detailqrcodeprivatecomp").innerHTML = "";
-		document.getElementById("detailb6").style.display = "none";
-		document.getElementById("detailmini").style.display = "none";
-		document.getElementById("detailbip38commands").style.display = "none";
-		document.getElementById("detailbip38").style.display = "none";
-	}
-};
-  </script>
-  <script type="text/javascript">
-ninja.wallets.donate = {
-    open: function () {
-        document.getElementById("donatearea").style.display = "block";
+    start: function() {
+      document.getElementById('paperqrscanner').className = 'show';
+      ninja.wallets.detailwallet.qrscanner.showError(null);
+      var supported = ninja.wallets.detailwallet.qrscanner.scanner.isSupported();
+      if (!supported) {
+        document.getElementById('paperqrnotsupported').className = '';
+      } else {
+        ninja.wallets.detailwallet.qrscanner.scanner.start();
+      }
     },
 
-    close: function () {
-        document.getElementById("donatearea").style.display = "none";
+    stop: function() {
+      ninja.wallets.detailwallet.qrscanner.scanner.stop();
+      document.getElementById('paperqrscanner').className = '';
     },
 
-    displayQrCode: function (currencyid, e) {
-        var keyValuePair = {};
-    	keyValuePair["donateqrcode"] = janin.currencies[currencyid].donate;
-		ninja.qrCode.showQrCode(keyValuePair, 4);
-
-        document.getElementById("donateqrcode").style.display = "block";
-        document.getElementById("donateqrcode").style.top = (e.offsetTop+15) + 'px';
+    showError: function(error) {
+      if (error) {
+        if (error == 'PERMISSION_DENIED' || error == 'PermissionDeniedError') {
+          document.getElementById('paperqrerror').innerHTML = '';
+          document.getElementById('paperqrpermissiondenied').className = '';
+        } else {
+          document.getElementById('paperqrerror').innerHTML = error;
+          document.getElementById('paperqrpermissiondenied').className = 'hide';
+        }
+      } else {
+        document.getElementById('paperqrerror').innerHTML = '';
+        document.getElementById('paperqrpermissiondenied').className = 'hide';
+      }
     }
+  },
+
+  open: function () {
+    document.getElementById("detailarea").style.display = "block";
+    document.getElementById("detailprivkey").focus();
+    if (!ninja.wallets.detailwallet.qrscanner.scanner) {
+      ninja.wallets.detailwallet.qrscanner.scanner = new QRCodeScanner(320, 240, 'paperqroutput',
+        function(data) {
+          document.getElementById('detailprivkey').value = data;
+          document.getElementById('paperqrscanner').className = '';
+          ninja.wallets.detailwallet.viewDetails();
+        },
+        function(error) {
+          ninja.wallets.detailwallet.qrscanner.showError(error);
+        });
+    }
+  },
+
+  close: function () {
+    document.getElementById("detailarea").style.display = "none";
+  },
+
+  openCloseFaq: function (faqNum) {
+    // do close
+    if (document.getElementById("detaila" + faqNum).style.display == "block") {
+      document.getElementById("detaila" + faqNum).style.display = "none";
+      document.getElementById("detaile" + faqNum).setAttribute("class", "more");
+    }
+    // do open
+    else {
+      document.getElementById("detaila" + faqNum).style.display = "block";
+      document.getElementById("detaile" + faqNum).setAttribute("class", "less");
+    }
+  },
+
+  viewDetails: function () {
+    var bip38 = false;
+    var key = document.getElementById("detailprivkey").value.toString().replace(/^\s+|\s+$/g, ""); // trim white space
+    document.getElementById("detailprivkey").value = key;
+    var bip38CommandDisplay = document.getElementById("detailbip38commands").style.display;
+    ninja.wallets.detailwallet.clear();
+    if (key == "") {
+      return;
+    }
+
+    if (ninja.privateKey.isBIP38Format(key)) {
+
+      document.getElementById("detailbip38commands").style.display = bip38CommandDisplay;
+      if (bip38CommandDisplay != "block") {
+        document.getElementById("detailbip38commands").style.display = "block";
+        document.getElementById("detailprivkeypassphrase").focus();
+        return;
+      }
+      var passphrase = document.getElementById("detailprivkeypassphrase").value.toString().replace(/^\s+|\s+$/g, ""); // trim white space
+      if (passphrase == "") {
+        alert(ninja.translator.get("bip38alertpassphraserequired"));
+        return;
+      }
+      document.getElementById("busyblock").className = "busy";
+      /*  [N.X]NOTE: We can still input BIP38 Encrypted key, but we won't present/show it. */
+      ninja.privateKey.BIP38EncryptedKeyToByteArrayAsync(key, passphrase, function (btcKeyOrError) {
+        document.getElementById("busyblock").className = "";
+        if (btcKeyOrError.message) {
+          alert(btcKeyOrError.message);
+          ninja.wallets.detailwallet.clear();
+        } else {
+          ninja.wallets.detailwallet.populateKeyDetails(new Bitcoin.ECKey(btcKeyOrError));
+        }
+      });
+    }
+
+    else 
+    {/*  [N.X] We can still input Mini or Base6, but we won't present/show those. */
+
+      // [NEYSODI.X][19052020/1123]
+      // If entering an invalid (WIF/c) Private-Key  on the 'details page' - thus not just some random test-data -
+      // ECKey will fail () and throw an exeption - if so, this handles it:
+      try         {var ecKey = new Bitcoin.ECKey(key);}
+      catch(err)  {var ecKey = {priv:null, err:err}; }
+      if (ecKey.priv == null)  {var X=ninja.translator.get("detailalertnotvalidprivatekey"); alert(X+'\n'+ecKey.err); ninja.wallets.detailwallet.clear();}
+      else                      {ninja.wallets.detailwallet.populateKeyDetails(ecKey);}
+    }
+  },
+
+  populateKeyDetails: function (btcKey)
+  {
+    if (btcKey.priv != null)
+    {
+      btcKey.setCompressed(false);
+      document.getElementById("detailprivhex").innerHTML = btcKey.toString().toUpperCase(); // [N.X] PrivateKey HEX
+      document.getElementById("detailprivb64").innerHTML = btcKey.toString("base64");       // [N.X] PrivateKey B64
+      btcKey.setCompressed(true);
+      var bitcoinAddressComp = btcKey.getBitcoinAddress();
+      var wifComp = btcKey.getBitcoinWalletImportFormat();
+      document.getElementById("detailpubkeycomp").innerHTML = btcKey.getPubKeyHex();  // [N.X] Compressed PublicKey
+      document.getElementById("detailaddresscomp").innerHTML = bitcoinAddressComp;    // [N.X] Compressed ADDRESS Compressed
+      document.getElementById("detailprivwifcomp").innerHTML = wifComp;               // [N.X] Compressed PrivateKey WIF
+      ninja.qrCode.showQrCode({"detailqrcodepubliccomp": bitcoinAddressComp,"detailqrcodeprivatecomp": wifComp}, 4);
+    }
+  },
+
+  clear: function () {
+    document.getElementById("detailpubkeycomp").innerHTML = "";
+    document.getElementById("detailaddresscomp").innerHTML = "";
+    document.getElementById("detailprivwifcomp").innerHTML = "";
+    document.getElementById("detailprivhex").innerHTML = "";
+    document.getElementById("detailprivb64").innerHTML = "";
+    document.getElementById("detailqrcodepubliccomp").innerHTML = "";
+    document.getElementById("detailqrcodeprivatecomp").innerHTML = "";
+    document.getElementById("detailbip38commands").style.display = "none";
+  }
 };
-  </script>
-  <script type="text/javascript">
-// change language
-if (ninja.getQueryString()["culture"] != undefined) {
-	ninja.translator.translate(ninja.getQueryString()["culture"]);
-} else {
-	ninja.translator.autodetectTranslation();
-}
-if (ninja.getQueryString()["showseedpool"] == "true" || ninja.getQueryString()["showseedpool"] == "1") {
-	document.getElementById("seedpoolarea").style.display = "block";
-}
-// change currency
-var currency = ninja.getQueryString()["currency"] || "veruscoin";
-currency = currency.toLowerCase();
-for(i = 0; i < janin.currencies.length; i++) {
-	if (janin.currencies[i].name.toLowerCase() == currency)
-		janin.currency.useCurrency(i);
-}
-// Reset title if no currency is choosen
-if(ninja.getQueryString()["currency"] == null) {
-    document.title = ninja.translator.get("defaultTitle");
-    document.getElementById("siteTitle").alt = ninja.translator.get("defaultTitle");
-}
+</script>
 
-// Extract i18n
-if (ninja.getQueryString()["i18nextract"]) {
-    var culture = ninja.getQueryString()["i18nextract"];
-    var div = document.createElement("div");
-    div.innerHTML = "<h3>i18n</h3>";
-    div.setAttribute("style", "text-align: center");
-    var elem = document.createElement("textarea");
-    elem.setAttribute("rows", "30");
-    elem.setAttribute("style", "width: 99%");
-    elem.setAttribute("wrap", "off");
+<script type="text/javascript">/*[NEYSODI.X]*/
+  var NEYSODI = {};
+  NEYSODI.funs1 = {
+                      fun1 : function()
+                      { // [called by body onload] [page now starts with a 'Stay Safe' message : USE AIRGAPPED computer]
+                        window.onclick = function() {SecureRandom.seedTime();}
+                      },
+                      fun2 : function()
+                      { // [called after clicked on OK at the start message] 
+                        document.getElementById("startMSG").style.display = "none";       // hide the start message
+                        document.getElementById("wallets").style.visibility = "visible";  // show the functionality
+                        window.onmousemove = function() {ninja.seeder.seed(event);}
+                      },
+                  };
+</script>
 
-    a=document.getElementsByClassName("i18n");
+<script type="text/javascript"> /*### [ START | RESTART( language change ) ]###*/
+  // set|change language
+  if    (ninja.getQueryString()["culture"] != undefined) {ninja.translator.translate(ninja.getQueryString()["culture"]);}
+  else  {ninja.translator.autodetectTranslation();}
+  var currency = "veruscoin";
+  janin.currency.useCurrency(0);
+  document.title = ninja.translator.get("defaultTitle");
+  document.getElementById("siteTitle").alt = ninja.translator.get("defaultTitle");
+  ninja.envSecurityCheck();
+  ninja.browserSecurityCheck();
+</script>
 
-    var i18n = "\"" + culture + "\": {\n";
-    for(x=0; x<a.length; x++) {
-        i18n += "\t";
-        i18n += "\"" + a[x].id + "\": \"";
-        if(ninja.translator.translations[culture] && ninja.translator.translations[culture][a[x].id])
-            i18n += cleani18n(ninja.translator.translations[culture][a[x].id]);
-        else
-            i18n += "(ENGLISH)" + cleani18n(a[x].innerHTML);
-        i18n += "\",\n";
-    }
-    for(x=0; x<ninja.translator.staticID.length; x++) {
-        i18n += "\t";
-        i18n += "\"" + ninja.translator.staticID[x] + "\": \"";
-        if(ninja.translator.translations[culture] && ninja.translator.translations[culture][ninja.translator.staticID[x]])
-            i18n += cleani18n(ninja.translator.translations[culture][ninja.translator.staticID[x]]);
-        else
-            i18n += "(ENGLISH)" + cleani18n(ninja.translator.translations["en"][ninja.translator.staticID[x]]);
-        i18n += "\",\n";
-    }
-
-    i18n += "},"
-
-    elem.innerHTML = i18n;
-    div.appendChild(elem);
-    document.body.appendChild(div);
-}
-function cleani18n(string) {
-    return string.replace(/^\s\s*/, '').replace(/\s\s*$/, '') // remove leading and trailing space
-                .replace(/\s*\n+\s*/g, '\\n') // replace new line
-                .replace(/"/g, '\\"');
-}
-
-ninja.envSecurityCheck();
-ninja.browserSecurityCheck();
-
-  </script>
 </body>
 </html>
