@@ -49,12 +49,15 @@ Useful for:
 This project provides an all-in-one HTML document (index.html) with embedded JavaScript/CSS.
 The JavaScript is readable, not minified and contains no XMLHttpRequest 's (no AJAX) ::: Stay-safe[VERIFY]
 The benefit of this technique is you can load the JavaScript locally and trust that the JavaScript did not change after being loaded.
+Meaning: there is no <script></script> inside the html that will request an external javascript file.
 
 END USER NOTES:
 -
 -
 - Use a modern browser :) --- NOT on a mobile-device
 - Take good care of your Private-Key(s)
+-
 - Again : ONLY use the resulting Wallet data of this software WHEN it was generated on a airgapped computer !
 -
+- That said, if you DO want to use paperwallets, keep them secure... also secure from fire, water, etc.
 -

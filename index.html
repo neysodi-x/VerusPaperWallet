@@ -6,9 +6,11 @@
   <meta name="keywords" content="paper, wallet, generator, veruscoin" />
 
 <!--
-  # VerusCoin PaperWallet Generator CE (Community Edition)
+  # VerusCoin PaperWallet Generator
   # Copyright (C)2020 The Verus Community
-  # Version : 19.MAY.2020 - by NEYSODI.X
+  #
+  # Version : 24.MAY.2020 : Community Edition
+  #
 
   This software is available under The MIT License (MIT)
 
@@ -9285,11 +9287,9 @@ function QRCodeScanner(width, height, container, success, error) {
 
 
   <style type="text/css">
-.more { background: url("./images/plus.png") no-repeat left center; width: 17px; height: 17px; display: inline-block; float: right; }
-.less { background: url("./images/minus.png") no-repeat left center; width: 17px; height: 17px; display: inline-block; float: right; }
-a { position: relative; z-index: 20; text-decoration: none; color: #d58424; }
+a { position: relative; z-index: 20; text-decoration: none; color: #cc6214; }
 .right { text-align: right; }
-.walletarea { display: none; border: 1px solid #BFBFBF; background-color: #fff; }
+.walletarea { display: none; border: 1px solid #BFBFBF; background-color: #DDDDDD; background: linear-gradient(to right, #c0c0c0, #dddddd 30%, #EEE); }
 hr { margin: 20px 0; border-top: 1px dashed #008000; }
 .keyarea { height: 110px; text-align: left; position: relative; padding: 25px 25px 10px; }
 .keyarea .public { float: left; }
@@ -9485,7 +9485,7 @@ h1 { margin: 0px; height: 91px; }
 #detailarea span.qrinput #detailprivkey { width: 420px; height: 20px; }
 #detailkeyarea { padding: 10px; }
 #detailarea { margin: 0; text-align: left; }
-#detailarea .notes { text-align: left; /*font-size: 80%;*/ padding: 0 0 20px 0; }
+#detailarea .notes { text-align: left; padding: 0 0 3px 0; }
 #detailarea .pubqr .item .label { text-decoration: none; }
 #detailarea .pubqr .item { float: left; margin: 10px 0; position: relative; }
 #detailarea .pubqr .item.right { float: right; position: relative; top: 0; }
@@ -9517,7 +9517,7 @@ h1 { margin: 0px; height: 91px; }
 .dialog-narrow { width: 300px; }
 
 .banner { background-color: #5387F6; font-size: 46px; text-shadow: 1px 1px 3px #000; color: #FF9547; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); text-align: left; position: relative; }
-.banner { background: linear-gradient(to right, #4276E5, #6498F7 50%, #EEEEEE); border-top-left-radius: 27px;}
+.banner { background: linear-gradient(to right, #2054c3, #3165d4 30%, #EEE); border-top-left-radius: 27px;}
 
 /* IE8 */
 .qrcodetable { border-width: 0px; border-style: none; border-color: #0000ff; border-collapse: collapse; }
@@ -9527,7 +9527,7 @@ h1 { margin: 0px; height: 91px; }
 @media screen
 {
   #tagline { margin: 0 0 15px 0; font-style: italic; text-align: left; }
-  .menu { text-align: left; background: linear-gradient(to right, #4276E5, #6498F7 50%, #EEEEEE);}
+  .menu { text-align: left; background: linear-gradient(to right, #2054c3, #3165d4 30%, #EEE);}
   .menu .tab { border-top-left-radius: 5px; border-top-right-radius: 5px; display: inline-block; background-color: #F5F5F5;
           border: 1px solid #BFBFBF; padding: 5px; margin: 0 2px 0 0; position: relative; top: 1px; z-index: 110; cursor: pointer; }
   .menu .tab:hover { color: #d58424; }
@@ -9612,11 +9612,15 @@ h1 { margin: 0px; height: 91px; }
 	position: relative;
 	top: -12px;
 }
+#initBanner, #generate, .dialog, .commands, .menu .tab.selected {background-color: #FFFFFF; background: linear-gradient(to right, #c0c0c0, #ffffff 30%, #EEE);}
+#startMSG {background-color: #233f7c; background: linear-gradient(20deg, #203970, #425B92 50%, #EEEEEE); padding: 9px; line-height: 26px; border-bottom-right-radius: 27px;}
+#startMSG, .dkALL {color: rgba(255,255,255, 0.7);}
+#startMSG_culture {font-size: 120%}
 .dkALL  {width: 100%; text-align: center;}
-.dkADR  {height: 232px; background-color: #40C0B0;}
-.dkPUBc {background-color: #30B0A0;}
-.dkPUBc, .dkPRVhex, .dkPRIVb64 {height: 132px;}
-.dkPRVwifc, .dkPRVhex, .dkPRIVb64 {background-color: #3165d4;}
+.dkADR  {height: 232px;}
+.dkPUBc, .dkADR {background-color: #546fae;}
+.dkPUBc, .dkPRVhex, .dkPRIVb64 {height: 100px;}
+.dkPRVwifc, .dkPRVhex, .dkPRIVb64 {background-color: #213e7b}
 .dkPRVwifc  {height: 287px;}
 
   </style>
@@ -9651,10 +9655,10 @@ h1 { margin: 0px; height: 91px; }
       </div>
     </div>
 
-    <div id="startMSG" style="background-color: #ffcd5e; padding: 9px; line-height: 26px; border-bottom-right-radius: 27px;">
-      <span id="startMSG_culture">Stay Safe :)<br>Only use the generated wallet data<br>when you run the generator on a OFFLINE computer<br>Stay Safe :)</span>
-      <br>[<a href="#" class="" onClick="NEYSODI.funs1.fun2();"> <B>OK</B> </a>]
-      <br><br><span style="color: rgba(0,0,0, 0.2);">Version : [19MAY2020] - by NEYSODI.X</span>
+    <div id="startMSG">
+      <span id="startMSG_culture">Stay Safe<br>Only use the generated wallet data<br>when you run the generator on a OFFLINE computer<br>Stay Safe</span>
+      <br><br>[<a href="#" class="" onClick="NEYSODI.funs1.fun2();"> <B>OK</B> </a>]
+      <br><br><span style="color: rgba(255,255,255, 0.3);">Version : [24MAY2020] - Community Edition</span>
     </div>
 
     <div id="wallets" style="visibility: hidden;">
@@ -9797,7 +9801,7 @@ h1 { margin: 0px; height: 91px; }
                 <input type="text" id="detailprivkey" value="" placeholder="Enter a private key, or click the QR icon to scan" autocomplete="off" onFocus="this.select();" onKeyPress="if (event.keyCode == 13) ninja.wallets.detailwallet.viewDetails();" />
                 <img onClick="ninja.wallets.detailwallet.qrscanner.start()" />
               </span>
-              <!-- [N.X] Accept Formats : [ WIF|Base64|Base16/HEX|BIP38 Encrypted|Base6|Mini ] -->
+              <!-- [NEYSODI.X] : Input Accepted Formats : [ WIF|Base64|Base16/HEX|BIP38 Encrypted|Base6|Mini ] -->
 
             <input type="button" id="detailview" value="View Details" onclick="ninja.wallets.detailwallet.viewDetails();" />
           </span>
@@ -9911,7 +9915,7 @@ janin.currency = {
         document.title = "VerusCoin " + ninja.translator.get("title");
         document.getElementById("siteTitle").alt = "VerusCoin<br>" + ninja.translator.get("title");
         document.getElementById("siteTitle").innerHTML = ninja.translator.get("title");
-        document.getElementById("startMSG_culture").innerHTML = ninja.translator.get("startNote");  //[N.X] Show the startnote [ use airgapped computer ]
+        document.getElementById("startMSG_culture").innerHTML = ninja.translator.get("startNote");  // [NEYSODI.X] Show the startnote [ "use airgapped computer" ]
 
         document.getElementById("cultureen").href = "?culture=en&currency=" + janin.currency.name().toLowerCase();
         document.getElementById("culturefr").href = "?culture=fr&currency=" + janin.currency.name().toLowerCase();
@@ -10602,11 +10606,10 @@ ninja.translator = {
 
 	translations: {
     ﻿"en": {
-    "startNote" : "Stay Safe :)<br>Only use the generated wallet data<br>when you run the generator on a OFFLINE computer<br>Stay Safe :)",
+    "startNote" : "Stay Safe<br>Only use the generated wallet data<br>when you run the generator on a OFFLINE computer<br>Stay Safe",
     "defaultTitle" : "VerusCoin Paperwallet Generator",
     "title" : "Paper Wallet Generator",
     "detailalertnotvalidprivatekey": "The text you entered is not a valid Private Key",
-    "detailconfirmsha256": "The text you entered is not a valid Private Key!\n\nWould you like to use the entered text as a passphrase and create a Private Key using a SHA256 hash of the passphrase?\n\nWarning: Choosing a strong passphrase is important to avoid brute force attempts to guess your passphrase and steal your coins.",
     "bip38alertincorrectpassphrase": "Incorrect passphrase for this encrypted private key.",
     "bip38alertpassphraserequired": "Passphrase required for BIP38 key",
 	"securitychecklistrandomOK": "Your browser is capable of generating cryptographically random keys using window.crypto.getRandomValues",
@@ -10617,11 +10620,9 @@ ninja.translator = {
 },
 
     ﻿"fr": {
-	"choosecurrency": "Choisissez une monnaie",
 	"singlewallet": "Adresse de portefeuille unique",
 	"paperwallet": "Adresse du portefeuille papier unique",
 	"detailwallet": "Détails de l'adresse du portefeuille unique",
-	"donate": "Soutien",
 	"generatelabelbitcoinaddress": "Génération d'une nouvelle adresse...",
 	"generatelabelmovemouse": "BOUGEZ votre souris pour ajouter de l'entropie...",
 	"generatelabelkeypress": "OU tapez des lettres aléatoires dans le champ texte",
@@ -10645,7 +10646,6 @@ ninja.translator = {
 	"securitystep6": "Faites un essai avec un montant faible avant de recevoir des paiements importants.",
 	"securitychecktitle": "Liste de sécurité :",
 	"securitychecklivecd": "Utilisez vous un système d'exploitation garanti sans malware ou virus, comme par exemple TailsOS?",
-	"supportedcurrencylbl": "monnaies supportées !",
 	"paperlabelencrypt": "Chiffrer en BIP38 ?",
 	"paperlabelBIPpassphrase": "Phrase de passe:",
 	"detaillabelenterprivatekey": "Entrez votre clé privée",
@@ -10667,17 +10667,11 @@ ninja.translator = {
 	"detaillabelprivbip38": "Clé privée chiffrée au format BIP38 (58 caractères Base58):",
 	"detaillabelq1": "Comment générer un porte-monnaie avec des dés ? Qu'est-ce que la Base6 (B6) ?",
 	"detaila1": "Une partie importante de la création d'un porte-monnaie pour les monnaies cryptographiques est de s'assurer que les nombres aléatoires utilisés pour la génération sont réellement aléatoires. L'aléatoire d'origine physique est bien meilleur que le pseudo-aléatoire généré par un ordinateur. La façon la plus facile de générer de l'aléatoire physique est d'utiliser des dés. Pour générer une clé privée, vous avez uniquement besoin d'un dé à 6 faces que vous allez lancer 99 fois. Arrêtez-vous après chaque lancé pour noter la valeur. Pour noter la valeur, suivez les règles suivantes: 1=1, 2=2, 3=3, 4=4, 5=5, 6=0. En faisant ça, vous générez un grand nombre aléatoire, votre clé privée, en Base6 (B6). Vous pouvez ensuite entrer les 99 caractères B6 de votre clé privée dans le champs texte au dessus et cliquer sur \"View Details\". Vous verrez ensuite l'adresse publique associée à cette clé privée. Vous devrez également noter votre clé privée au format WIF, car il est plus courant d'usage que la clé privée brute.",
-	"donatetextfooter": "Pour soutenir le développement de ce générateur de porte-monnaie, vous pouvez faire une donation grâce aux adresses suivante. Quand le support pour une monnaie a été ajouté par un contributeur externe au projet, les donations lui parviennent directement.",
-	"footersupport": "Soutenir WalletGenerator.net",
-	"footerlabelgithub": "Télécharger (dépôt GitHub)",
-	"footerlabelcopyright2": "Voir le fichier COPYRIGHTS inclus.",
-	"footerlabelnowarranty": "Aucune garantie.",
-  "startNote" : "Restez en sécurité :)<br>Utiliser uniquement les données de porte-monnaie générées<br>lorsque vous exécutez le générateur sur un ordinateur HORS LIGNE<br>Restez en sécurité :)",
+  "startNote" : "Restez en sécurité<br>Utiliser uniquement les données de porte-monnaie générées<br>lorsque vous exécutez le générateur sur un ordinateur HORS LIGNE<br>Restez en sécurité",
 	"defaultTitle": "Générateur de porte-monnaie papier universel pour VerusCoin",
 	"title": "Générateur de porte-monnaie papier",
 	"bip38alertincorrectpassphrase": "Phrase de passe incorrecte pour cette clé privée chiffrée.",
 	"bip38alertpassphraserequired": "Phrase de passe requise pour une clé chiffrée BIP38.",
-	"detailconfirmsha256": "Le texte que vous avez entré n'est pas une clé privée valide !\nVoulez vous utiliser le texte comme une phrase de passe et générer une clé privée en prenant un hash SHA256 de cette phrase ?\n\nAttention: Choisir un mot de passe solide est important pour vous protéger des attaques bruteforce visant à trouver votre mot de passe et voler vos fonds.",
 	"detailalertnotvalidprivatekey": "Le texte que vous avez entré n'est pas une clé privée valide",
 	"securitychecklistrandomOK": "Votre navigateur est capable de générer des clés cryptographiques sécurisés en utilisant window.crypto.getRandomValues",
 	"securitychecklistrandomNOK": "Votre navigateur ne supporte PAS window.crypto.getRandomValues(), ce qui est important pour générer des portes-monnaies les plus sécurisé possible. Utilisez un navigateur plus moderne.",
@@ -10686,11 +10680,9 @@ ninja.translator = {
 	"paperwalletback": "<ul><li>Pour transférer des fonds sur ce porte-monnaie, envoyez des fonds à l'adresse publique, à n'importe quel moment.</li><li>Vérifier votre solde en cherchant l'adresse publique dans un explorateur de Blockchain.</li><li><b>NE REVELEZ PAS VOTRE CLE PRIVEE</b> jusqu'au moment où vous voudrez importer votre solde dans un porte-monnaie logiciel.</li></ul><b>Montant :</b> ___________       <b>Date :</b> ________________<br /><b>Notes :</b> ______________________________________",
 },
     "ru": {
-	"choosecurrency": "Выберите валюту",
 	"singlewallet": "Адрес одного кошелька",
 	"paperwallet": "Единый бумажный адрес кошелька",
 	"detailwallet": "Детали адреса одного кошелька",
-	"donate": "Поддержка",
 	"generatelabelbitcoinaddress": "Создается новый адрес...",
 	"generatelabelmovemouse": "ПОДВИГАЙТЕ мышкой, чтобы сделать генерацию немного более случайной...",
 	"generatelabelkeypress": "ИЛИ введите случайные символы в это поле для текста",
@@ -10714,7 +10706,6 @@ ninja.translator = {
 	"securitystep6": "Перед тем как получать значительные платежи, пожалуйста, попробуйте вывести с кошелька небольшие суммы.",
 	"securitychecktitle": "Перечень безопасности :",
 	"securitychecklivecd": "Используете ли Вы безопасную операционную систему, гарантированно чистую от различного рода шпионских программ и вирусов, например, такую как TailsOS?",
-	"supportedcurrencylbl": "валют доступно !",
 	"paperlabelencrypt": "Зашифровать с помощью BIP38?",
 	"paperlabelBIPpassphrase": "Кодовая фраза:",
 	"detaillabelenterprivatekey": "Введите закрытый ключ",
@@ -10736,17 +10727,11 @@ ninja.translator = {
 	"detaillabelprivbip38": "Закрытый ключ в формате BIP38 (58 символов Base58):",
 	"detaillabelq1": "Как мне создать кошелек с помощью игрального кубика? Что такое B6?",
 	"detaila1": "Важная чать в создании кошелька для крипто-валюты заключается в том, чтобы убедиться, что используются действительно случайные числа. Физическая случайность лучше, чем сгенерированные компьютером псевдо-случайные числа. Простейший способ сгенерировать физически случайные числа - игральный кубик. Для создания закрытого ключа нужен лишь 6-гранный кубик, который нужно будет кинуть 99 раз. Записывайте каждое значение, при этом следуйте следующему правилу: 1=1, 2=2, 3=3, 4=4, 5=5, 6=0. Таким образом, Вы получите большое случайное число - Ваш закрытый ключ в формате B6, т.е. в шестиричном формате. Теперь Вы можете ввести 99-тисимвольный закрытый ключ в шестиричном формате в текстовое поле сверху и нажать кнопку \"Посмотреть подробности\". Вы увидите открытый адрес, соответствующий Вашему закрытому ключу. Обратите также внимание на Ваш закрытый ключ в формате WIF, поскольку этот формат является наиболее широко используемым.",
-	"donatetextfooter": "Для поддержки разработчиков этого генератора кошельков используйте следующие адреса. Если поддержка для валюты добавлена внешним разработчиком, он получает Ваши пожертвования напрямую.",
-	"footersupport": "Поддержать WalletGenerator.net",
-	"footerlabelgithub": "Скачать (репозиторий на GitHub)",
-	"footerlabelcopyright2": "Смотрите включенный файл COPYRIGHTS.",
-	"footerlabelnowarranty": "Гарантии не предоставляются.",
-  "startNote" : "Оставайтесь в безопасности :)<br>Используйте только сгенерированные данные кошелька<br>когда вы запускаете генератор на оффлайновый компьютере<br>Оставайтесь в безопасности :)",
+  "startNote" : "Оставайтесь в безопасности<br>Используйте только сгенерированные данные кошелька<br>когда вы запускаете генератор на оффлайновый компьютере<br>Оставайтесь в безопасности",
 	"defaultTitle": "генератор бумажных кошельков для VerusCoin",
 	"title": "Генератор бумажных кошельков",
 	"bip38alertincorrectpassphrase": "Неправильная кодовая фраза для данного закрытого ключа.",
 	"bip38alertpassphraserequired": "Для закрытого ключа в формате BIP38 требуется кодовая фраза",
-	"detailconfirmsha256": "Введенный Вами текст не является закрытым ключом!\nХотите использовать введенный текст в качестве кодовой фразы и создать закрытый ключ, используя SHA256 хэш этой кодовой фразы?\nВнимание: Выбор сильной кодовой фразы очень важен для предотвращения взлома путем прямого перебора, совершаемого злоумышленниками с целью похитить Ваши деньги.",
 	"detailalertnotvalidprivatekey": "Введенный Вами текст не является закрытым ключом",
 	"securitychecklistrandomOK": "Ваш браузер способен генерировать криптографически случайные ключи с помощью функции window.crypto.getRandomValues",
 	"securitychecklistrandomNOK": "Ваш браузер НЕ поддерживает функцию window.crypto.getRandomValues(), которая важна для генерирования максимально безопасных случайных чисел. Пожалуйста, используйте более современный браузер.",
@@ -10755,11 +10740,9 @@ ninja.translator = {
 	"paperwalletback": "<ul><li>Для пополнения средств этого бумажного кошелька отправьте криптовалюту на его открытый адрес.</li><li>Проверьте Ваш балас, найдя открытый адрес в просмотрщиках блокчейна, таких как explorer.vrsc.0x03.services.</li><li><b>НЕ РАССКРЫВАЙТЕ ЗАКРЫТЫЙ КЛЮЧ</b> пока Вы не будете готовы импортировать баланс этого кошелька в крипто-клиент, биржу или онлайн-кошелек.</li></ul><b>Сумма :</b> ___________       <b>Дата :</b> ________________<br /><b>Пометки :</b> ______________________________________",
 },
     "es": {
-    "choosecurrency": "Elige criptodivisa",
     "singlewallet": "Dirección de billetera única",
     "paperwallet": "Dirección de billetera de papel única",
     "detailwallet": "Detalles de la dirección de billetera única",
-    "donate": "Ayúdanos",
     "generatelabelbitcoinaddress": "Generando nueva dirección...",
     "generatelabelmovemouse": "MUEVE el ratón para añadir aleatoriedad extra...",
     "generatelabelkeypress": "O escribe caracteres aleatorios en el cuadro de texto",
@@ -10783,7 +10766,6 @@ ninja.translator = {
     "securitystep6": "Por favor, prueba a gastar una pequeña cantidad antes de recibir cualquier pago grande.",
     "securitychecktitle": "Lista de verificación de seguridad:",
     "securitychecklivecd": "Estás usando un sistema operativo seguro, garantizado de estar libre de spyware y virus, por ejemplo, TailsOS?",
-    "supportedcurrencylbl": "criptodivisas soportadas!",
     "paperlabelencrypt": "Encriptación BIP38?",
     "paperlabelBIPpassphrase": "Contraseña:",
     "detaillabelenterprivatekey": "Introduce la clave privada",
@@ -10805,17 +10787,11 @@ ninja.translator = {
     "detaillabelprivbip38": "Clave privada en formato BIP38 (58 caracteres Base58):",
     "detaillabelq1": "Cómo puedo crear una cartera usando dados? Qué  es B6?",
     "detaila1": "Una parte importante de la creación de una cartera para una criptomoneda es cerciorarse de que los números aleatorios utilizados para crearla son verdaderamente aleatorios. La aleatoriedad real es mucho mejor que la pseudo-aleatoriedad generada por ordenador. La manera más sencilla de generar aleatoriedad real es usando dados. Para crear una clave privada para una criptomoneda sólo necesitas un dado de 6 caras, que tirarás 99 veces, anotando cada vez el valor del dado. Cuando anotes los valores, sigue estas reglas: 1=1, 2=2, 3=3, 4=4, 5=5, 6=0. Haciéndolo así estarás creando un gran número aleatorio, que será tu clave privada, en formato B6 o base 6. Si introduces tu clave privada de 99 caracteres en base 6 en el cuadro de texto de arriba y haces click en ver detalles, verás la dirección pública asociada a tu clave privada. Deberías anotarte también tu clave privada en formato WIF, porque su uso está más extendido.",
-    "donatetextfooter": "Para apoyar el desarrollo de este generador de carteras, puedes hacer donaciones a las siguientes direcciones. Cuando el soporte para una criptodivisa ha sido añadido por un colaborador externo del proyecto, él recibe la donación directamente.",
-    "footersupport": "Ayuda a WalletGenerator.net",
-    "footerlabelgithub": "Descargar (Repositorio GitHub)",
-    "footerlabelcopyright2": "Ver archivo COPYRIGHTS incluido.",
-    "footerlabelnowarranty": "Sin garantía.",
-    "startNote" : "Mantenerse a salvo :)<br>Solo use los datos de billetera generados<br>cuando ejecutas el generador en una computadora sin conexión<br>Mantenerse a salvo :)",
+    "startNote" : "Mantenerse a salvo<br>Solo use los datos de billetera generados<br>cuando ejecutas el generador en una computadora sin conexión<br>Mantenerse a salvo",
     "defaultTitle": "Generador de carteras de papel para VerusCoin",
     "title": "Generador de carteras de papel",
     "bip38alertincorrectpassphrase": "Contraseña incorrecta para esta clave privada encriptada.",
     "bip38alertpassphraserequired": "Se necesita contraseña para esta clave BIP38",
-    "detailconfirmsha256": "El texto introducido no es una clave privada válida!\n¿Quieres utilizar el texto introducido como contraseña y crear una clave privada usando un hash SHA256 de la contraseña?\nAtención: Elegir una contraseña robusta es importante para evitar los intentos de adivinarla mediante la fuerza bruta y que te roben tus monedas.",
     "detailalertnotvalidprivatekey": "El texto introducido no es una clave privada válida",
     "securitychecklistrandomOK": "Tu navegador es capaz de generar claves criptográficamente aleatorias utilizando window.crypto.getRandomValues",
     "securitychecklistrandomNOK": "Tu navegador NO soporta window.crypto.getRandomValues(), que es importante para generar los números aleatorios más seguros posibles. Utiliza un navegador más moderno.",
@@ -10826,8 +10802,8 @@ ninja.translator = {
 
 	}
 };
-
   </script>
+
   <script type="text/javascript">
 ninja.wallets.singlewallet = {
 	open: function () {
@@ -10853,7 +10829,7 @@ ninja.wallets.singlewallet = {
 			var privateKeyWif = key.getBitcoinWalletImportFormat();
 			document.getElementById("suppliedPrivateKey").value = "";
 			document.getElementById("btcaddress").innerHTML = bitcoinAddress;
-			document.getElementById("btcprivwif").innerHTML = privateKeyWif + "<br /><a href=\"#\" onclick=\"document.getElementById(\'suppliedPrivateKey\').value=\'" + privateKeyWif+ "\';ninja.tabSwitch(document.getElementById(\'paperwallet\'))\">Copy WIF to Paper Wallet</a>";
+			document.getElementById("btcprivwif").innerHTML = privateKeyWif + "<br /><a href=\"#\" onclick=\"document.getElementById(\'suppliedPrivateKey\').value=\'" + privateKeyWif+ "\';ninja.tabSwitch(document.getElementById(\'paperwallet\'))\"><B>Copy WIF to Paper Wallet</B></a>";
 			var keyValuePair = {
 				"qrcode_public": bitcoinAddress,
 				"qrcode_private": privateKeyWif
@@ -11097,19 +11073,6 @@ ninja.wallets.detailwallet = {
     document.getElementById("detailarea").style.display = "none";
   },
 
-  openCloseFaq: function (faqNum) {
-    // do close
-    if (document.getElementById("detaila" + faqNum).style.display == "block") {
-      document.getElementById("detaila" + faqNum).style.display = "none";
-      document.getElementById("detaile" + faqNum).setAttribute("class", "more");
-    }
-    // do open
-    else {
-      document.getElementById("detaila" + faqNum).style.display = "block";
-      document.getElementById("detaile" + faqNum).setAttribute("class", "less");
-    }
-  },
-
   viewDetails: function () {
     var bip38 = false;
     var key = document.getElementById("detailprivkey").value.toString().replace(/^\s+|\s+$/g, ""); // trim white space
@@ -11134,7 +11097,7 @@ ninja.wallets.detailwallet = {
         return;
       }
       document.getElementById("busyblock").className = "busy";
-      /*  [N.X]NOTE: We can still input BIP38 Encrypted key, but we won't present/show it. */
+      /*  [NEYSODI.X]NOTE: We can still input BIP38 Encrypted key on the DETAILS-page, but we won't present/show it. */
       ninja.privateKey.BIP38EncryptedKeyToByteArrayAsync(key, passphrase, function (btcKeyOrError) {
         document.getElementById("busyblock").className = "";
         if (btcKeyOrError.message) {
@@ -11147,11 +11110,11 @@ ninja.wallets.detailwallet = {
     }
 
     else 
-    {/*  [N.X] We can still input Mini or Base6, but we won't present/show those. */
+    {/*  [NEYSODI.X]NOTE: We can still input Mini or Base6, but we won't present/show those. */
 
       // [NEYSODI.X][19052020/1123]
       // If entering an invalid (WIF/c) Private-Key  on the 'details page' - thus not just some random test-data -
-      // ECKey will fail () and throw an exeption - if so, this handles it:
+      // ECKey will fail () and throw an exeption - if so, this catches it:
       try         {var ecKey = new Bitcoin.ECKey(key);}
       catch(err)  {var ecKey = {priv:null, err:err}; }
       if (ecKey.priv == null)  {var X=ninja.translator.get("detailalertnotvalidprivatekey"); alert(X+'\n'+ecKey.err); ninja.wallets.detailwallet.clear();}
@@ -11193,11 +11156,11 @@ ninja.wallets.detailwallet = {
   var NEYSODI = {};
   NEYSODI.funs1 = {
                       fun1 : function()
-                      { // [called by body onload] [page now starts with a 'Stay Safe' message : USE AIRGAPPED computer]
+                      { // called by body onload - page now starts with a 'Stay Safe' message : USE AIRGAPPED computer
                         window.onclick = function() {SecureRandom.seedTime();}
                       },
                       fun2 : function()
-                      { // [called after clicked on OK at the start message] 
+                      { // called after a click on [ OK ] at the start message
                         document.getElementById("startMSG").style.display = "none";       // hide the start message
                         document.getElementById("wallets").style.visibility = "visible";  // show the functionality
                         window.onmousemove = function() {ninja.seeder.seed(event);}
@@ -11205,7 +11168,7 @@ ninja.wallets.detailwallet = {
                   };
 </script>
 
-<script type="text/javascript"> /*### [ START | RESTART( language change ) ]###*/
+<script type="text/javascript"> /*### [ START | restart( language change ) ]###*/
   // set|change language
   if    (ninja.getQueryString()["culture"] != undefined) {ninja.translator.translate(ninja.getQueryString()["culture"]);}
   else  {ninja.translator.autodetectTranslation();}
